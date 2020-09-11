@@ -1,0 +1,20 @@
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Reading Test.exe
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.AssemblyInfoInputs.cache
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.AssemblyInfo.cs
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\credentials.json
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Reading Test.deps.json
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Reading Test.runtimeconfig.json
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Reading Test.runtimeconfig.dev.json
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Reading Test.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Reading Test.pdb
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Google.Apis.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Google.Apis.Core.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Google.Apis.Sheets.v4.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.csproj.CoreCompileInputs.cache
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.csproj.CopyComplete
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.dll
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.pdb
+C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.genruntimeconfig.cache

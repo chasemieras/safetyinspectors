@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\TestApp\\TestApp.csproj": {}
+    "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\TestApp\\TestApp.csproj": {
+    "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\TestApp\\TestApp.csproj",
-        "projectName": "TestApp",
-        "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\TestApp\\TestApp.csproj",
+        "projectUniqueName": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj",
+        "projectName": "Reading Test",
+        "projectPath": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj",
         "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\TestApp\\obj\\",
+        "outputPath": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Google.Apis.Sheets.v4": {
+              "target": "Package",
+              "version": "[1.49.0.2069, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
