@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.RootTypes>
+    <RootType FullName="Microsoft.UI.Xaml.Application">
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.ResourceDictionary">
+      <RootProperty Name="MergedDictionaries" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.XamlControlsResources" />
+    <RootType FullName="Microsoft.UI.Xaml.Controls.Page">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Markup.Compiler.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Microsoft.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Microsoft.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="SafetyInspectionApp.MainPage" />
+  </Roots.RootTypes>
+</Roots>
