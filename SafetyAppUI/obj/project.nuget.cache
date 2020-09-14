@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "h8/TTrna5Um0hJgiPw6EU7xa7vcTB8xZ0zdhV1VVXPmTSFpMw7nSexPpyJyHQwgEAJSuXMSEF0O1RT0aHRjAFA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyAppUI\\SafetyAppUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chase Mieras\\.nuget\\packages\\microsoft.vcrtforwarders.140\\1.0.6\\microsoft.vcrtforwarders.140.1.0.6.nupkg.sha512",
+    "C:\\Users\\Chase Mieras\\.nuget\\packages\\microsoft.winui\\3.0.0-preview2.200713.0\\microsoft.winui.3.0.0-preview2.200713.0.nupkg.sha512"
+  ],
+  "logs": []
+}
