@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "MSgsL13RBDjTSIsKdB51nGxvDzQzxQ2REOAcuLRfrMGhK/BcY6gAd3w7ZZofw3BALBpdqXNqx60Tf4dVJbBs+Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\angie\\source\\repos\\NewInspector\\TestApp\\TestApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\angie\\.nuget\\packages\\google.apis\\1.49.0\\google.apis.1.49.0.nupkg.sha512",
+    "C:\\Users\\angie\\.nuget\\packages\\google.apis.auth\\1.49.0\\google.apis.auth.1.49.0.nupkg.sha512",
+    "C:\\Users\\angie\\.nuget\\packages\\google.apis.core\\1.49.0\\google.apis.core.1.49.0.nupkg.sha512",
+    "C:\\Users\\angie\\.nuget\\packages\\google.apis.sheets.v4\\1.49.0.2069\\google.apis.sheets.v4.1.49.0.2069.nupkg.sha512",
+    "C:\\Users\\angie\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

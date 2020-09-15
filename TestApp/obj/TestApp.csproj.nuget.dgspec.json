@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\TestApp\\TestApp.csproj": {}
+    "C:\\Users\\angie\\source\\repos\\NewInspector\\TestApp\\TestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\TestApp\\TestApp.csproj": {
+    "C:\\Users\\angie\\source\\repos\\NewInspector\\TestApp\\TestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\TestApp\\TestApp.csproj",
+        "projectUniqueName": "C:\\Users\\angie\\source\\repos\\NewInspector\\TestApp\\TestApp.csproj",
         "projectName": "TestApp",
-        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\TestApp\\TestApp.csproj",
-        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\TestApp\\obj\\",
+        "projectPath": "C:\\Users\\angie\\source\\repos\\NewInspector\\TestApp\\TestApp.csproj",
+        "packagesPath": "C:\\Users\\angie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\angie\\source\\repos\\NewInspector\\TestApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\angie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -37,6 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Google.Apis.Sheets.v4": {
+              "target": "Package",
+              "version": "[1.49.0.2069, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
