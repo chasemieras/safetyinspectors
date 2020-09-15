@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Reading Test",
+    "\\TestApp"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\TestApp.sln",
   "PreviewInSolutionExplorer": false
 }

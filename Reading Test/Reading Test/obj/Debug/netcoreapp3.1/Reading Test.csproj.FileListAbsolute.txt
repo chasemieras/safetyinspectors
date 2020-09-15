@@ -18,3 +18,4 @@ C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug
 C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.dll
 C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.pdb
 C:\Users\gamep\source\repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.genruntimeconfig.cache
+C:\Users\gamep\Source\Repos\safetyinspectors\Reading Test\Reading Test\obj\Debug\netcoreapp3.1\Reading Test.csprojAssemblyReference.cache

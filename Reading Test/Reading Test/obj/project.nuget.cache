@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DlcQYp3kEOI8ZygSp8rKhmDy/2qAlw9FlTAU05iZ8EtrNxKCOVLNOnF0mgioKdad+eaEr0JKOKXFHdlcU5NuJA==",
+  "dgSpecHash": "tmHiKBtu7pf18YAyCpq7ITlUFBK8ZC6/As9WySqEErAqgxr69qWy/qFkD8CMIq4lemsme0o3CAutzp97gHtZow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj",
+  "projectFilePath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gamep\\.nuget\\packages\\google.apis\\1.49.0\\google.apis.1.49.0.nupkg.sha512",
     "C:\\Users\\gamep\\.nuget\\packages\\google.apis.auth\\1.49.0\\google.apis.auth.1.49.0.nupkg.sha512",
