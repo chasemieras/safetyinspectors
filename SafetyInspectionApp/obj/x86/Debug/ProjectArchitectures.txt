@@ -1,1 +1,0 @@
-C:\Users\Chase Mieras\source\repos\SafetyInspectionApp\SafetyInspectionApp\SafetyInspectionApp.csproj;x86
