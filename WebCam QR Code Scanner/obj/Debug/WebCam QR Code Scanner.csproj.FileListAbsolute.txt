@@ -1,0 +1,20 @@
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\bin\Debug\WebCam QR Code Scanner.exe
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\bin\Debug\WebCam QR Code Scanner.pdb
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\bin\Debug\BasselTech CamCapture.dll
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\bin\Debug\MessagingToolkit.QRCode.dll
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.csprojResolveAssemblyReference.cache
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\obj\Debug\WebCam_QR_Code_Scanner.Form1.resources
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\obj\Debug\WebCam_QR_Code_Scanner.Properties.Resources.resources
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.csproj.GenerateResource.Cache
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.exe
+c:\users\bassel\documents\visual studio 2015\Projects\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.pdb
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\bin\Debug\WebCam QR Code Scanner.exe
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\bin\Debug\WebCam QR Code Scanner.pdb
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.csprojAssemblyReference.cache
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam_QR_Code_Scanner.Form1.resources
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam_QR_Code_Scanner.Properties.Resources.resources
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.csproj.GenerateResource.cache
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.csproj.CoreCompileInputs.cache
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.csproj.CopyComplete
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.exe
+C:\Users\gamep\Source\Repos\safetyinspectors\WebCam QR Code Scanner\obj\Debug\WebCam QR Code Scanner.pdb
