@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ISkgLHkFFy3z+fZ/6O5e46zeNnTZA+UE8ViPBdNU9PoirtjMoJrUZQLFF2Kzu6S0V2COFT6sAzBFCe35M+YZ5g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test With QR Code\\Reading Test With QR Code\\Reading Test With QR Code.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gamep\\.nuget\\packages\\google.apis\\1.49.0\\google.apis.1.49.0.nupkg.sha512",
+    "C:\\Users\\gamep\\.nuget\\packages\\google.apis.auth\\1.49.0\\google.apis.auth.1.49.0.nupkg.sha512",
+    "C:\\Users\\gamep\\.nuget\\packages\\google.apis.core\\1.49.0\\google.apis.core.1.49.0.nupkg.sha512",
+    "C:\\Users\\gamep\\.nuget\\packages\\google.apis.sheets.v4\\1.49.0.2069\\google.apis.sheets.v4.1.49.0.2069.nupkg.sha512",
+    "C:\\Users\\gamep\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

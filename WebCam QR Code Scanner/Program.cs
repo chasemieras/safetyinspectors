@@ -16,6 +16,7 @@ namespace WebCam_QR_Code_Scanner
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
         }
     }
 }
