@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ISkgLHkFFy3z+fZ/6O5e46zeNnTZA+UE8ViPBdNU9PoirtjMoJrUZQLFF2Kzu6S0V2COFT6sAzBFCe35M+YZ5g==",
+  "dgSpecHash": "tmHiKBtu7pf18YAyCpq7ITlUFBK8ZC6/As9WySqEErAqgxr69qWy/qFkD8CMIq4lemsme0o3CAutzp97gHtZow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\Reading Test With QR Code\\Reading Test With QR Code\\Reading Test With QR Code.csproj",
+  "projectFilePath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gamep\\.nuget\\packages\\google.apis\\1.49.0\\google.apis.1.49.0.nupkg.sha512",
     "C:\\Users\\gamep\\.nuget\\packages\\google.apis.auth\\1.49.0\\google.apis.auth.1.49.0.nupkg.sha512",

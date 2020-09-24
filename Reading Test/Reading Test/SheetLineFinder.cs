@@ -1,24 +1,24 @@
 ﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
-using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Threading;
-using System.Linq;
 
-namespace SheetsQuickstart
+namespace Reading_Test
 {
-    class Program
+    class SheetLineFinder
     {
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/sheets.googleapis.com-dotnet-quickstart.json
         static string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
         static string ApplicationName = "Google Sheets API .NET Quickstart";
 
-        static void Main(string[] args)
+        public SheetLineFinder (string link, string range, string item)
         {
             UserCredential credential;
 
@@ -45,12 +45,10 @@ namespace SheetsQuickstart
             });
 
             // Define request parameters.
-            //String spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
-            String spreadsheetId = "1iSPzeIef7yuPilgx6HGeX_Y4RrxP2WOiztvCw8FiGP4";
-            //String range = "Class Data!A2:E";
-            String range = "A2:E";
+            String spreadsheetId = link;
+            String where = range;
             SpreadsheetsResource.ValuesResource.GetRequest request =
-                    service.Spreadsheets.Values.Get(spreadsheetId, range);
+                    service.Spreadsheets.Values.Get(spreadsheetId, where);
 
             // Prints the names and majors of students in a sample spreadsheet:
             // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -61,14 +59,9 @@ namespace SheetsQuickstart
                 Console.WriteLine("Name, Major");
                 foreach (var row in values)
                 {
-                    if(row != null && row.Count > 0 && row[0] != null)
+                    if(values.ToString() == item)
                     {
-                        Console.WriteLine(row[0].ToString());
-                        // Print columns A and E, which correspond to indices 0 and 4.
-                        if (row[0].ToString() == "gurary sux" && row[0] != null)
-                        {
-                            Console.WriteLine("{0}, {1}", row[0], row[4]);
-                        }
+                        Console.WriteLine("{0}, {1}", row[0], row[4]);
                     }
                 }
             }

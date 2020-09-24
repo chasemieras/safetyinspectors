@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reading Test With QR Code", "Reading Test With QR Code\Reading Test With QR Code.csproj", "{FC650688-0DEC-4932-8619-8377D9177486}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reading Test", "Reading Test\Reading Test.csproj", "{86701CEA-1749-41A6-9C2D-3C50F40996E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FC650688-0DEC-4932-8619-8377D9177486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC650688-0DEC-4932-8619-8377D9177486}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC650688-0DEC-4932-8619-8377D9177486}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC650688-0DEC-4932-8619-8377D9177486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86701CEA-1749-41A6-9C2D-3C50F40996E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86701CEA-1749-41A6-9C2D-3C50F40996E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86701CEA-1749-41A6-9C2D-3C50F40996E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86701CEA-1749-41A6-9C2D-3C50F40996E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
