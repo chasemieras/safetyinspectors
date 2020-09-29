@@ -18,5 +18,9 @@ namespace SafetyInspectionApplication
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+        public void TestMethod() { 
+            
+        }
     }
 }
