@@ -9,6 +9,12 @@
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.49.0.2069" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
   <ProjectExtensions><VisualStudio><UserProperties credentials_1json__JsonSchema="https://json.schemastore.org/grunt-task" /></VisualStudio></ProjectExtensions>
 
 </Project>

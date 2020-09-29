@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using Newtonsoft.Json;
 
 namespace SheetsQuickstart
 {
@@ -45,7 +46,7 @@ namespace SheetsQuickstart
 
             // Define request parameters.
             String spreadsheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
-            String range = "Class Data!A2:F";
+            String range = "Class Data!A2:E";
             SpreadsheetsResource.ValuesResource.GetRequest request =
                     service.Spreadsheets.Values.Get(spreadsheetId, range);
 

@@ -10,7 +10,6 @@ C:\Users\angie\source\repos\NewInspector\TestApp\obj\Debug\netcoreapp3.1\TestApp
 C:\Users\angie\source\repos\NewInspector\TestApp\obj\Debug\netcoreapp3.1\TestApp.dll
 C:\Users\angie\source\repos\NewInspector\TestApp\obj\Debug\netcoreapp3.1\TestApp.pdb
 C:\Users\angie\source\repos\NewInspector\TestApp\obj\Debug\netcoreapp3.1\TestApp.genruntimeconfig.cache
-C:\Users\angie\source\repos\NewInspector\TestApp\bin\Debug\netcoreapp3.1\credentials.json
 C:\Users\angie\source\repos\NewInspector\TestApp\bin\Debug\netcoreapp3.1\Google.Apis.dll
 C:\Users\angie\source\repos\NewInspector\TestApp\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
 C:\Users\angie\source\repos\NewInspector\TestApp\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
@@ -19,3 +18,4 @@ C:\Users\angie\source\repos\NewInspector\TestApp\bin\Debug\netcoreapp3.1\Google.
 C:\Users\angie\source\repos\NewInspector\TestApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\angie\source\repos\NewInspector\TestApp\obj\Debug\netcoreapp3.1\TestApp.csproj.CoreCompileInputs.cache
 C:\Users\angie\source\repos\NewInspector\TestApp\obj\Debug\netcoreapp3.1\TestApp.csproj.CopyComplete
+C:\Users\angie\source\repos\NewInspector\TestApp\bin\Debug\netcoreapp3.1\credentials.json
