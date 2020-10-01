@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace Reading_Test
 {
-    class SheetLineFinder
+    public class SheetLineFinder
     {
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/sheets.googleapis.com-dotnet-quickstart.json
@@ -59,9 +59,14 @@ namespace Reading_Test
                 Console.WriteLine("Name, Major");
                 foreach (var row in values)
                 {
-                    if(values.ToString() == item)
+                    if (row != null && row.Count > 0 && row[0] != null)
                     {
-                        Console.WriteLine("{0}, {1}", row[0], row[4]);
+                        Console.WriteLine(row[0].ToString());
+                        // Print columns A and E, which correspond to indices 0 and 4.
+                        if (row[0].ToString() == item && row[0] != null)
+                        {
+                            Console.WriteLine("{0}, {1}", row[0], row[4]);
+                        }
                     }
                 }
             }

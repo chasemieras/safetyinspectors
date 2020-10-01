@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCam QR Code Scanner", "WebCam QR Code Scanner.csproj", "{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reading Test", "..\Reading Test\Reading Test\Reading Test.csproj", "{FD45D225-C1F0-4D52-A0FF-95C4ED37078D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD45D225-C1F0-4D52-A0FF-95C4ED37078D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD45D225-C1F0-4D52-A0FF-95C4ED37078D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD45D225-C1F0-4D52-A0FF-95C4ED37078D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD45D225-C1F0-4D52-A0FF-95C4ED37078D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1DD2BAE-F5AB-4FC5-9058-B77826F66141}
 	EndGlobalSection
 EndGlobal
