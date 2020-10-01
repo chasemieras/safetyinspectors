@@ -51,13 +51,13 @@ namespace WebCam_QR_Code_Scanner
 
             try
             {
-                Console.WriteLine(Decoder.decode(new QRCodeBitmapImage(CapImage)).ToString());
+                Console.WriteLine(Decoder.decode(new QRCodeBitmapImage(CapImage)));
                 MessageBox.Show(Decoder.decode(new QRCodeBitmapImage(CapImage)));
-                SheetLineFinder QRSheet = new SheetLineFinder("1iSPzeIef7yuPilgx6HGeX_Y4RrxP2WOiztvCw8FiGP4", "A2:E", Decoder.decode(new QRCodeBitmapImage(CapImage)).ToString());
+                SheetLineFinder QRSheet = new SheetLineFinder("1iSPzeIef7yuPilgx6HGeX_Y4RrxP2WOiztvCw8FiGP4", "A2:E", Decoder.decode(new QRCodeBitmapImage(CapImage)));
             }
             catch (Exception)
             {
-
+                //Console.WriteLine("Did not work and I dont know why.");
             }
         }
 
