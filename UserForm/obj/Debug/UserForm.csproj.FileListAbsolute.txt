@@ -1,0 +1,10 @@
+H:\Documents\SafetyInspectors\UserForm\bin\Debug\UserForm.exe.config
+H:\Documents\SafetyInspectors\UserForm\bin\Debug\UserForm.exe
+H:\Documents\SafetyInspectors\UserForm\bin\Debug\UserForm.pdb
+H:\Documents\SafetyInspectors\UserForm\obj\Debug\UserForm.csprojAssemblyReference.cache
+H:\Documents\SafetyInspectors\UserForm\obj\Debug\UserForm.s.resources
+H:\Documents\SafetyInspectors\UserForm\obj\Debug\UserForm.Properties.Resources.resources
+H:\Documents\SafetyInspectors\UserForm\obj\Debug\UserForm.csproj.GenerateResource.cache
+H:\Documents\SafetyInspectors\UserForm\obj\Debug\UserForm.csproj.CoreCompileInputs.cache
+H:\Documents\SafetyInspectors\UserForm\obj\Debug\UserForm.exe
+H:\Documents\SafetyInspectors\UserForm\obj\Debug\UserForm.pdb
