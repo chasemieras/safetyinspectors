@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj": {}
+    "C:\\Users\\angie\\source\\repos\\NewInspector\\Reading Test\\Reading Test\\Reading Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj": {
+    "C:\\Users\\angie\\source\\repos\\NewInspector\\Reading Test\\Reading Test\\Reading Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj",
+        "projectUniqueName": "C:\\Users\\angie\\source\\repos\\NewInspector\\Reading Test\\Reading Test\\Reading Test.csproj",
         "projectName": "Reading Test",
-        "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test\\Reading Test.csproj",
-        "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test\\obj\\",
+        "projectPath": "C:\\Users\\angie\\source\\repos\\NewInspector\\Reading Test\\Reading Test\\Reading Test.csproj",
+        "packagesPath": "C:\\Users\\angie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\angie\\source\\repos\\NewInspector\\Reading Test\\Reading Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\angie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
