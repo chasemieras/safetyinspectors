@@ -16,5 +16,28 @@ namespace SafetyInspectionApplication
         {
             InitializeComponent();
         }
+
+        private void LadderTypeGroupBox_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            LadderConditionsGroupBox.Visible = true;
+            ExtensionConditionsGroupBox.Visible = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            LadderConditionsGroupBox.Visible = true;
+            ExtensionConditionsGroupBox.Visible = false;
+        }
+
+        private void extensionButton_CheckedChanged(object sender, EventArgs e)
+        {
+            LadderConditionsGroupBox.Visible = false;
+            ExtensionConditionsGroupBox.Visible = true;
+        }
     }
 }
