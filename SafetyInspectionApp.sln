@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reading Test", "Reading Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppWriteTo", "ConsoleAppWriteTo\ConsoleAppWriteTo.csproj", "{D99DB01A-B2BB-462C-A6C0-40CF07626B1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{D6FEB9D8-26BA-4646-B012-9EFB5A6028DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D99DB01A-B2BB-462C-A6C0-40CF07626B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D99DB01A-B2BB-462C-A6C0-40CF07626B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D99DB01A-B2BB-462C-A6C0-40CF07626B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FEB9D8-26BA-4646-B012-9EFB5A6028DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FEB9D8-26BA-4646-B012-9EFB5A6028DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FEB9D8-26BA-4646-B012-9EFB5A6028DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FEB9D8-26BA-4646-B012-9EFB5A6028DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

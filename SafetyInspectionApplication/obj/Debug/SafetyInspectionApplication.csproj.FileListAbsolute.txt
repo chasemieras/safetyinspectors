@@ -8,3 +8,10 @@ C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplication\
 C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.csproj.CoreCompileInputs.cache
 C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.exe
 C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.pdb
+C:\Users\gamep\Source\Repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.csprojAssemblyReference.cache
+C:\Users\gamep\Source\Repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.Form1.resources
+C:\Users\gamep\Source\Repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.Properties.Resources.resources
+C:\Users\gamep\Source\Repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.csproj.GenerateResource.cache
+C:\Users\gamep\Source\Repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.csproj.CoreCompileInputs.cache
+C:\Users\gamep\Source\Repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.exe
+C:\Users\gamep\Source\Repos\safetyinspectors\SafetyInspectionApplication\obj\Debug\SafetyInspectionApplication.pdb
