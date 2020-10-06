@@ -19,8 +19,5 @@ namespace SafetyInspectionApplication
             Application.Run(new Form1());
         }
 
-        public void TestMethod() { 
-            
-        }
     }
 }
