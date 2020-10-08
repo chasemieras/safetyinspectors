@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminFormCreation", "AdminF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCam QR Code Scanner", "WebCam QR Code Scanner\WebCam QR Code Scanner.csproj", "{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helper", "Helper\Helper.csproj", "{D6FEB9D8-26BA-4646-B012-9EFB5A6028DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
