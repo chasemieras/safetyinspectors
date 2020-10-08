@@ -25,21 +25,58 @@ namespace Helper
         }
 
         /// <summary>
-        /// Searches the google sheet between a certain range and grabs all in the range.
+        /// Gets the range of the spreadsheet you will be working will.
+        /// If the spreadsheet is empty the range will be defaulted into Range "A:A"
         /// </summary>
-        /// <param name="link"></param>
-        /// <param name="range"></param>
+        /// <param name="service"></param>
         /// <returns></returns>
-        public static IList<IList<Object>> SearchSheet(string link, string range)
+        protected static string GetRange(SheetsService service)
+        {
+            // Define request parameters.
+            String spreadsheetId = SheetId;
+            String range = "A:A";
+            SpreadsheetsResource.ValuesResource.GetRequest getRequest =
+                       service.Spreadsheets.Values.Get(spreadsheetId, range);
+            ValueRange getResponse = getRequest.Execute();
+            IList<IList<Object>> getValues = getResponse.Values;
+            if (getValues == null)
+            {
+                String emptyRange = "1:1";
+                return emptyRange;
+            }
+            int currentCount = getValues.Count();
+            String newRange = "A" + currentCount + ":A";
+            return newRange;
+        }
+
+        /// <summary>
+        /// Will inset all the things as strings. If you want data in proper format then change the 
+        /// ValueInputOptionEnum.RAW to .USERENTERED
+        /// </summary>
+        private static void UpdatGoogleSheetinBatch(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
+        {
+            SpreadsheetsResource.ValuesResource.AppendRequest request =
+               service.Spreadsheets.Values.Append(new ValueRange() { Values = values }, spreadsheetId, newRange);
+            request.InsertDataOption = SpreadsheetsResource.ValuesResource.AppendRequest.InsertDataOptionEnum.INSERTROWS;
+            request.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;
+            var response = request.Execute();
+        }
+
+
+
+        /// <summary>
+        /// Authorizes our request to access Google's API
+        /// </summary>
+        /// <returns></returns>
+        private static SheetsService AuthorizeAccess()
         {
             UserCredential credential;
-
             using (var stream =
                 new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
-                // The file token.json stores the user's access and refresh tokens, and is created
-                // automatically when the authorization flow completes for the first time.
-                string credPath = "token.json";
+                string credPath = System.Environment.GetFolderPath(
+                    System.Environment.SpecialFolder.Personal);
+                credPath = Path.Combine(credPath, ".credentials/sheets.googleapis.com-dotnet-quickstart.json");
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
                     Scopes,
@@ -48,19 +85,29 @@ namespace Helper
                     new FileDataStore(credPath, true)).Result;
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
-
             // Create Google Sheets API service.
             var service = new SheetsService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,
             });
+            return service;
+        }
+
+        /// <summary>
+        /// Searches the google sheet between a certain range and grabs all in the range.
+        /// </summary>
+        /// <param name="link"></param>
+        /// <param name="range"></param>
+        /// <returns></returns>
+        public static IList<IList<Object>> SearchSheet(string link, string range)
+        {
 
             // Define request parameters.
             String spreadsheetId = link;
             String where = range;
             SpreadsheetsResource.ValuesResource.GetRequest request =
-                    service.Spreadsheets.Values.Get(spreadsheetId, where);
+                    AuthorizeAccess().Spreadsheets.Values.Get(spreadsheetId, where);
 
             // Prints the names and majors of students in a sample spreadsheet:
             // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -68,6 +115,7 @@ namespace Helper
             IList<IList<Object>> values = response.Values;
             return values;
         }
+
 
         /// <summary>
         /// Gets a row(s)
@@ -82,12 +130,10 @@ namespace Helper
 
             if (values != null && values.Count > 0)
             {
-                //onsole.WriteLine("Name, Major");
                 foreach (var row in values)
                 {
                     if (row != null && row.Count > 0 && row[0] != null)
                     {
-                        //Console.WriteLine(row[0].ToString());
                         // Print columns A and E, which correspond to indices 0 and 4.
                         if (row[0].ToString() == item && row[0] != null)
                         {
@@ -121,51 +167,6 @@ namespace Helper
             }
             Console.Read();
         }
-        public static void Sheet(string link, string range, int howFar)
-        {
-            IList<IList<Object>> values = SearchSheet(link, range);
 
-            if (values != null && values.Count > 0)
-            {
-                //onsole.WriteLine("Name, Major");
-                foreach (var row in values)
-                {
-                    if (row != null && row.Count > 0 && row[0] != null)
-                    {
-                        //Console.WriteLine(row[0].ToString());
-                        // Print columns A and E, which correspond to indices 0 and 4.
-                        if (row[0] != null)
-                        {
-                            if (row.Count < howFar)
-                            {
-                                for (int i = 0; i < row.Count; i++)
-                                {
-                                    if (row[i] != "")
-                                    {
-                                        Console.Write(row[i] + ", ");
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                for (int i = 0; i < howFar; i++)
-                                {
-                                    if (row[i] != "")
-                                    {
-                                        Console.Write(row[i] + ", ");
-                                    }
-                                }
-                            }
-                        }
-                        Console.WriteLine("Next Item");
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("No data found.");
-            }
-            Console.Read();
-        }
     }
 }

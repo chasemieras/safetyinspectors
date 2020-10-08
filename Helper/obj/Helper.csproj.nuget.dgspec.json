@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\Helper.csproj": {}
+    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\Helper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\Helper.csproj": {
+    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\Helper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\Helper.csproj",
+        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\Helper.csproj",
         "projectName": "Helper",
-        "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\Helper.csproj",
-        "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\obj\\",
+        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\Helper.csproj",
+        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
