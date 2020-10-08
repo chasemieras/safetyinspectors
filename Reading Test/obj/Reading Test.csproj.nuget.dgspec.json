@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test.csproj": {}
+    "C:\\Users\\mbeebe22\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test.csproj": {
+    "C:\\Users\\mbeebe22\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test.csproj",
+        "projectUniqueName": "C:\\Users\\mbeebe22\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test.csproj",
         "projectName": "Reading Test",
-        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Reading Test\\Reading Test.csproj",
-        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Reading Test\\obj\\",
+        "projectPath": "C:\\Users\\mbeebe22\\Source\\Repos\\safetyinspectors\\Reading Test\\Reading Test.csproj",
+        "packagesPath": "C:\\Users\\mbeebe22\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mbeebe22\\Source\\Repos\\safetyinspectors\\Reading Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mbeebe22\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

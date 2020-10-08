@@ -12,32 +12,39 @@ namespace SafetyInspectionApplication
 {
     public partial class Form1 : Form
     {
+       
+
         public Form1()
         {
             InitializeComponent();
+
         }
 
-        private void LadderTypeGroupBox_Enter(object sender, EventArgs e)
+  
+
+        private void NextFormButton_Click(object sender, EventArgs e)
         {
-           
+            this.Visible = false;
+
+            if (extensionLadderButton.Checked == true)
+            {
+                ExtensionLadderForm extensionForm = new ExtensionLadderForm();
+                extensionForm.Visible = true;
+            }
+            else if (podiumButton.Checked == true || stepLadderButton.Checked == true)
+            {
+                StepAndPodiumForm stepAndPodiumForm = new StepAndPodiumForm();
+                stepAndPodiumForm.Visible = true;
+            }
+            else
+            {
+                Console.WriteLine("missing ladder type");
+            }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            LadderConditionsGroupBox.Visible = true;
-            ExtensionConditionsGroupBox.Visible = false;
-        }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            LadderConditionsGroupBox.Visible = true;
-            ExtensionConditionsGroupBox.Visible = false;
-        }
-
-        private void extensionButton_CheckedChanged(object sender, EventArgs e)
-        {
-            LadderConditionsGroupBox.Visible = false;
-            ExtensionConditionsGroupBox.Visible = true;
         }
     }
 }
