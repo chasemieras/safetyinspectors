@@ -19,24 +19,3 @@ C:\Users\gamep\Source\Repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Help
 C:\Users\gamep\Source\Repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.dll
 C:\Users\gamep\Source\Repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
 C:\Users\gamep\Source\Repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Helper.exe
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\credentials.json
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Helper.deps.json
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.json
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Helper.runtimeconfig.dev.json
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Helper.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Helper.pdb
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Google.Apis.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Google.Apis.Auth.PlatformServices.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Google.Apis.Auth.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Google.Apis.Core.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Google.Apis.Sheets.v4.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.csprojAssemblyReference.cache
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfoInputs.cache
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.AssemblyInfo.cs
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CoreCompileInputs.cache
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.csproj.CopyComplete
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.dll
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.pdb
-C:\Users\Chase Mieras\source\repos\safetyinspectors\Helper\obj\Debug\netcoreapp3.1\Helper.genruntimeconfig.cache
