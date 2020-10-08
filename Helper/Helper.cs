@@ -21,19 +21,16 @@ namespace Helper
 
         static void Main(string[] args)
         {
-            UserCredential credential;
-
-            SheetLineFinder(SheetId, "A1:D10", "Column - 1", 2);
+            ItemFinder(SheetId, "A1:D10", "Column - 1", 4);
         }
 
         /// <summary>
-        /// Gets a row(s)
+        /// Searches the google sheet between a certain range and grabs all in the range.
         /// </summary>
-        /// <param name="link">The link to the google sheet you want to look at.</param>
-        /// <param name="range">The range you want to search through.</param>
-        /// <param name="item">The item you want to find.</param>
+        /// <param name="link"></param>
+        /// <param name="range"></param>
         /// <returns></returns>
-        public static void SheetLineFinder(string link, string range, string item, int howFar)
+        public static IList<IList<Object>> SearchSheet(string link, string range)
         {
             UserCredential credential;
 
@@ -69,8 +66,20 @@ namespace Helper
             // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
             ValueRange response = request.Execute();
             IList<IList<Object>> values = response.Values;
-            string columns = "";
-            string rows = "";
+            return values;
+        }
+
+        /// <summary>
+        /// Gets a row(s)
+        /// </summary>
+        /// <param name="link">The link to the google sheet you want to look at.</param>
+        /// <param name="range">The range you want to search through.</param>
+        /// <param name="item">The item you want to find.</param>
+        /// <returns></returns>
+        public static void ItemFinder(string link, string range, string item, int howFar)
+        {
+            IList<IList<Object>> values = SearchSheet(link, range);
+
             if (values != null && values.Count > 0)
             {
                 //onsole.WriteLine("Name, Major");
@@ -82,17 +91,73 @@ namespace Helper
                         // Print columns A and E, which correspond to indices 0 and 4.
                         if (row[0].ToString() == item && row[0] != null)
                         {
-                            //Console.WriteLine("{0}, {1}, {2}", row[0], row[1], row[2]);
-                            for(int i = 0; i < howFar; i++)
+                            if(row.Count < howFar)
                             {
-                                columns = columns + ("{" + i + "},");
-                                rows = rows + row[i] + " ";
-                            }
-                            for (int i = 0; i < howFar; i++)
+                                for (int i = 0; i < row.Count; i++)
+                                {
+                                    if (row[i] != "")
+                                    {
+                                        Console.Write(row[i] + ", ");
+                                    }
+                                }
+                            }else
                             {
-                                Console.WriteLine(rows);
+                                for (int i = 0; i < howFar; i++)
+                                {
+                                    if (row[i] != "")
+                                    {
+                                        Console.Write(row[i] + ", ");
+                                    }
+                                }
                             }
                         }
+                        Console.WriteLine("Next Item");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No data found.");
+            }
+            Console.Read();
+        }
+        public static void Sheet(string link, string range, int howFar)
+        {
+            IList<IList<Object>> values = SearchSheet(link, range);
+
+            if (values != null && values.Count > 0)
+            {
+                //onsole.WriteLine("Name, Major");
+                foreach (var row in values)
+                {
+                    if (row != null && row.Count > 0 && row[0] != null)
+                    {
+                        //Console.WriteLine(row[0].ToString());
+                        // Print columns A and E, which correspond to indices 0 and 4.
+                        if (row[0] != null)
+                        {
+                            if (row.Count < howFar)
+                            {
+                                for (int i = 0; i < row.Count; i++)
+                                {
+                                    if (row[i] != "")
+                                    {
+                                        Console.Write(row[i] + ", ");
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int i = 0; i < howFar; i++)
+                                {
+                                    if (row[i] != "")
+                                    {
+                                        Console.Write(row[i] + ", ");
+                                    }
+                                }
+                            }
+                        }
+                        Console.WriteLine("Next Item");
                     }
                 }
             }
