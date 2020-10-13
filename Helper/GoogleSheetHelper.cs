@@ -25,6 +25,36 @@ namespace GoogleSheetHelper
         }
 
         /// <summary>
+        /// Authorizes our request to access Google's API
+        /// </summary>
+        /// <returns></returns>
+        private static SheetsService AuthorizeAccess()
+        {
+            UserCredential credential;
+            using (var stream =
+                new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+            {
+                string credPath = System.Environment.GetFolderPath(
+                    System.Environment.SpecialFolder.Personal);
+                credPath = Path.Combine(credPath, ".credentials/sheets.googleapis.com-dotnet-quickstart.json");
+                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    GoogleClientSecrets.Load(stream).Secrets,
+                    Scopes,
+                    "user",
+                    CancellationToken.None,
+                    new FileDataStore(credPath, true)).Result;
+                Console.WriteLine("Credential file saved to: " + credPath);
+            }
+            // Create Google Sheets API service.
+            var service = new SheetsService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential,
+                ApplicationName = ApplicationName,
+            });
+            return service;
+        }
+
+        /// <summary>
         /// Gets the range of the spreadsheet you will be working will.
         /// If the spreadsheet is empty the range will be defaulted into Range "A:A"
         /// </summary>
@@ -60,38 +90,6 @@ namespace GoogleSheetHelper
             request.InsertDataOption = SpreadsheetsResource.ValuesResource.AppendRequest.InsertDataOptionEnum.INSERTROWS;
             request.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;
             var response = request.Execute();
-        }
-
-
-
-        /// <summary>
-        /// Authorizes our request to access Google's API
-        /// </summary>
-        /// <returns></returns>
-        private static SheetsService AuthorizeAccess()
-        {
-            UserCredential credential;
-            using (var stream =
-                new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
-            {
-                string credPath = System.Environment.GetFolderPath(
-                    System.Environment.SpecialFolder.Personal);
-                credPath = Path.Combine(credPath, ".credentials/sheets.googleapis.com-dotnet-quickstart.json");
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
-                    Scopes,
-                    "user",
-                    CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
-                Console.WriteLine("Credential file saved to: " + credPath);
-            }
-            // Create Google Sheets API service.
-            var service = new SheetsService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
-            });
-            return service;
         }
 
         /// <summary>
