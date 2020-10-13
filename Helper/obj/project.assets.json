@@ -206,9 +206,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\Helper.csproj",
-      "projectName": "Helper",
-      "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\Helper.csproj",
+      "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+      "projectName": "GoogleSheetHelper",
+      "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
       "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\obj\\",
       "projectStyle": "PackageReference",

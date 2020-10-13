@@ -1,0 +1,6 @@
+C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplicationNETCORE\obj\Debug\netcoreapp3.1\SafetyInspectionApplicationNETCORE.csprojAssemblyReference.cache
+C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplicationNETCORE\obj\Debug\netcoreapp3.1\SafetyInspectionApplication.MainForm.resources
+C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplicationNETCORE\obj\Debug\netcoreapp3.1\SafetyInspectionApplicationNETCORE.csproj.GenerateResource.cache
+C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplicationNETCORE\obj\Debug\netcoreapp3.1\SafetyInspectionApplicationNETCORE.AssemblyInfoInputs.cache
+C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplicationNETCORE\obj\Debug\netcoreapp3.1\SafetyInspectionApplicationNETCORE.AssemblyInfo.cs
+C:\Users\Chase Mieras\source\repos\safetyinspectors\SafetyInspectionApplicationNETCORE\obj\Debug\netcoreapp3.1\SafetyInspectionApplicationNETCORE.csproj.CoreCompileInputs.cache

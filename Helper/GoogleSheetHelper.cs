@@ -9,9 +9,9 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 
-namespace Helper
+namespace GoogleSheetHelper
 {
-    public class Helper
+    public class GoogleSheetHelper
     {
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/sheets.googleapis.com-dotnet-quickstart.json
@@ -21,7 +21,7 @@ namespace Helper
 
         static void Main(string[] args)
         {
-            ItemFinder(SheetId, "A1:D10", "Column - 1", 4);
+            DataFinder(SheetId, "A1:D10", "Column - 1", 4);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Helper
         /// Will inset all the things as strings. If you want data in proper format then change the 
         /// ValueInputOptionEnum.RAW to .USERENTERED
         /// </summary>
-        private static void UpdatGoogleSheetinBatch(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
+        private static void UpdatGoogleSheet(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
         {
             SpreadsheetsResource.ValuesResource.AppendRequest request =
                service.Spreadsheets.Values.Append(new ValueRange() { Values = values }, spreadsheetId, newRange);
@@ -118,15 +118,15 @@ namespace Helper
 
 
         /// <summary>
-        /// Gets a row(s)
+        /// 
         /// </summary>
-        /// <param name="link">The link to the google sheet you want to look at.</param>
-        /// <param name="range">The range you want to search through.</param>
-        /// <param name="item">The item you want to find.</param>
-        /// <returns></returns>
-        public static void ItemFinder(string link, string range, string item, int howFar)
+        /// <param name="SheetLink"></param>
+        /// <param name="RangeOnSheet"></param>
+        /// <param name="DataWanted"></param>
+        /// <param name="HowFarToGo"></param>
+        public static void DataFinder(string SheetLink, string RangeOnSheet, string DataWanted, int HowFarToGo)
         {
-            IList<IList<Object>> values = SearchSheet(link, range);
+            IList<IList<Object>> values = SearchSheet(SheetLink, RangeOnSheet);
 
             if (values != null && values.Count > 0)
             {
@@ -135,9 +135,9 @@ namespace Helper
                     if (row != null && row.Count > 0 && row[0] != null)
                     {
                         // Print columns A and E, which correspond to indices 0 and 4.
-                        if (row[0].ToString() == item && row[0] != null)
+                        if (row[0].ToString() == DataWanted && row[0] != null)
                         {
-                            if(row.Count < howFar)
+                            if(row.Count < HowFarToGo)
                             {
                                 for (int i = 0; i < row.Count; i++)
                                 {
@@ -148,7 +148,7 @@ namespace Helper
                                 }
                             }else
                             {
-                                for (int i = 0; i < howFar; i++)
+                                for (int i = 0; i < HowFarToGo; i++)
                                 {
                                     if (row[i] != "")
                                     {
