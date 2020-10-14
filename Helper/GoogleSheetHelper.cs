@@ -16,7 +16,6 @@ namespace GoogleSheetHelper
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/sheets.googleapis.com-dotnet-quickstart.json
         static string[] Scopes = { SheetsService.Scope.Spreadsheets };
-        static string ApplicationName = "ConsoleAppWriteTo";
         static string SheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
 
         static void Main(string[] args)
@@ -48,8 +47,7 @@ namespace GoogleSheetHelper
             // Create Google Sheets API service.
             var service = new SheetsService(new BaseClientService.Initializer()
             {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
+                HttpClientInitializer = credential
             });
             return service;
         }
@@ -83,7 +81,7 @@ namespace GoogleSheetHelper
         /// Will inset all the things as strings. If you want data in proper format then change the 
         /// ValueInputOptionEnum.RAW to .USERENTERED
         /// </summary>
-        private static void UpdatGoogleSheet(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
+        private static void WriteToSheet(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
         {
             SpreadsheetsResource.ValuesResource.AppendRequest request =
                service.Spreadsheets.Values.Append(new ValueRange() { Values = values }, spreadsheetId, newRange);

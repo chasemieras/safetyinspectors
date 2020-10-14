@@ -56,9 +56,9 @@
             this.LadderConditionsGroupBox.Controls.Add(this.checkBox2);
             this.LadderConditionsGroupBox.Controls.Add(this.stepsCheckBox);
             this.LadderConditionsGroupBox.Location = new System.Drawing.Point(26, 26);
-            this.LadderConditionsGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LadderConditionsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.LadderConditionsGroupBox.Name = "LadderConditionsGroupBox";
-            this.LadderConditionsGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LadderConditionsGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.LadderConditionsGroupBox.Size = new System.Drawing.Size(302, 271);
             this.LadderConditionsGroupBox.TabIndex = 8;
             this.LadderConditionsGroupBox.TabStop = false;
@@ -68,7 +68,7 @@
             // 
             this.checkBox8.AutoSize = true;
             this.checkBox8.Location = new System.Drawing.Point(10, 210);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(171, 17);
             this.checkBox8.TabIndex = 7;
@@ -79,7 +79,7 @@
             // 
             this.checkBox7.AutoSize = true;
             this.checkBox7.Location = new System.Drawing.Point(10, 185);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(183, 17);
             this.checkBox7.TabIndex = 6;
@@ -90,7 +90,7 @@
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Location = new System.Drawing.Point(10, 160);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(182, 17);
             this.checkBox6.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.Location = new System.Drawing.Point(10, 132);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(174, 17);
             this.checkBox5.TabIndex = 4;
@@ -112,7 +112,7 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(10, 103);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(146, 17);
             this.checkBox4.TabIndex = 3;
@@ -123,7 +123,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(10, 78);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(161, 17);
             this.checkBox3.TabIndex = 2;
@@ -134,7 +134,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(10, 51);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(249, 17);
             this.checkBox2.TabIndex = 1;
@@ -145,11 +145,11 @@
             // 
             this.stepsCheckBox.AutoSize = true;
             this.stepsCheckBox.Location = new System.Drawing.Point(10, 25);
-            this.stepsCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stepsCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.stepsCheckBox.Name = "stepsCheckBox";
-            this.stepsCheckBox.Size = new System.Drawing.Size(212, 17);
+            this.stepsCheckBox.Size = new System.Drawing.Size(218, 17);
             this.stepsCheckBox.TabIndex = 0;
-            this.stepsCheckBox.Text = "Steps: Loose, cracked, bent, or missing";
+            this.stepsCheckBox.Text = "Steps: Loose, cracked, bent, or missing  ";
             this.stepsCheckBox.UseVisualStyleBackColor = true;
             // 
             // ActionGroupBox
@@ -157,9 +157,9 @@
             this.ActionGroupBox.Controls.Add(this.ladderSafeButton);
             this.ActionGroupBox.Controls.Add(this.ladderDamagedButton);
             this.ActionGroupBox.Location = new System.Drawing.Point(344, 34);
-            this.ActionGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ActionGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.ActionGroupBox.Name = "ActionGroupBox";
-            this.ActionGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ActionGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.ActionGroupBox.Size = new System.Drawing.Size(302, 70);
             this.ActionGroupBox.TabIndex = 9;
             this.ActionGroupBox.TabStop = false;
@@ -169,7 +169,7 @@
             // 
             this.ladderSafeButton.AutoSize = true;
             this.ladderSafeButton.Location = new System.Drawing.Point(10, 41);
-            this.ladderSafeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ladderSafeButton.Margin = new System.Windows.Forms.Padding(2);
             this.ladderSafeButton.Name = "ladderSafeButton";
             this.ladderSafeButton.Size = new System.Drawing.Size(152, 17);
             this.ladderSafeButton.TabIndex = 1;
@@ -181,7 +181,7 @@
             // 
             this.ladderDamagedButton.AutoSize = true;
             this.ladderDamagedButton.Location = new System.Drawing.Point(10, 22);
-            this.ladderDamagedButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ladderDamagedButton.Margin = new System.Windows.Forms.Padding(2);
             this.ladderDamagedButton.Name = "ladderDamagedButton";
             this.ladderDamagedButton.Size = new System.Drawing.Size(269, 17);
             this.ladderDamagedButton.TabIndex = 0;
@@ -192,7 +192,7 @@
             // submitButton
             // 
             this.submitButton.Location = new System.Drawing.Point(464, 192);
-            this.submitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.submitButton.Margin = new System.Windows.Forms.Padding(2);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(76, 34);
             this.submitButton.TabIndex = 16;
@@ -208,7 +208,7 @@
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.ActionGroupBox);
             this.Controls.Add(this.LadderConditionsGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StepAndPodiumForm";
             this.Text = "StepAndPodiumForm";
             this.LadderConditionsGroupBox.ResumeLayout(false);
