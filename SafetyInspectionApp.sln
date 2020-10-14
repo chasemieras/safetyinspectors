@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminFormCreation", "AdminFormCreation\AdminFormCreation.csproj", "{EBCB594E-4E65-4332-B44B-E6A64F603074}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCam QR Code Scanner", "WebCam QR Code Scanner\WebCam QR Code Scanner.csproj", "{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleSheetHelper", "Helper\GoogleSheetHelper.csproj", "{D6FEB9D8-26BA-4646-B012-9EFB5A6028DD}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EBCB594E-4E65-4332-B44B-E6A64F603074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBCB594E-4E65-4332-B44B-E6A64F603074}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBCB594E-4E65-4332-B44B-E6A64F603074}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBCB594E-4E65-4332-B44B-E6A64F603074}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
