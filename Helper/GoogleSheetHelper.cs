@@ -21,7 +21,15 @@ namespace GoogleSheetHelper
 
         static void Main(string[] args)
         {
-            DataFinder(SheetId, "A1:D10", "Column - 1", 4);
+            List<IList<Object>> objNewRecords = new List<IList<Object>>(); 
+            IList<Object> obj = new List<Object>(); 
+            obj.Add("Column - 1"); 
+            obj.Add("Column - 2");
+            obj.Add("");
+            obj.Add("Column - 3"); 
+            objNewRecords.Add(obj);
+            //NextLinePrint(objNewRecords, SheetId, "A7:D7", AuthorizeAccess());
+            findThis(SheetId, "A1:D10", "Column - 2", 4);
         }
 
         /// <summary>
@@ -83,7 +91,7 @@ namespace GoogleSheetHelper
         /// Will inset all the things as strings. If you want data in proper format then change the 
         /// ValueInputOptionEnum.RAW to .USERENTERED
         /// </summary>
-        private static void UpdatGoogleSheet(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
+        private static void NextLinePrint(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
         {
             SpreadsheetsResource.ValuesResource.AppendRequest request =
                service.Spreadsheets.Values.Append(new ValueRange() { Values = values }, spreadsheetId, newRange);
@@ -125,23 +133,28 @@ namespace GoogleSheetHelper
         public static void DataFinder(string SheetLink, string RangeOnSheet, string DataWanted, int HowFarToGo)
         {
             IList<IList<Object>> values = SearchSheet(SheetLink, RangeOnSheet);
+            int valuesCount = 0;
 
             if (values != null && values.Count > 0)
             {
                 foreach (var row in values)
                 {
+                    //valuesCount++;
                     if (row != null && row.Count > 0 && row[0] != null)
                     {
+
                         // Print columns A and E, which correspond to indices 0 and 4.
                         if (row[0].ToString() == DataWanted && row[0] != null)
                         {
-                            if(row.Count < HowFarToGo)
+                            if (row.Count < HowFarToGo)
                             {
                                 for (int i = 0; i < row.Count; i++)
                                 {
                                     if (row[i] != "")
                                     {
-                                        Console.Write(row[i] + ", ");
+                                        valuesCount++;
+                                        //Console.Write(row[i] + ", ");
+                                        Console.WriteLine(i + " " + valuesCount);
                                     }
                                 }
                             }else
@@ -150,12 +163,14 @@ namespace GoogleSheetHelper
                                 {
                                     if (row[i] != "")
                                     {
-                                        Console.Write(row[i] + ", ");
+                                        valuesCount++;
+                                        //Console.Write(row[i] + ", ");
+                                        Console.WriteLine(i + " " + valuesCount);
                                     }
                                 }
                             }
                         }
-                        Console.WriteLine("Next Item");
+                        //Console.WriteLine("Next Item");
                     }
                 }
             }
@@ -164,6 +179,80 @@ namespace GoogleSheetHelper
                 Console.WriteLine("No data found.");
             }
             Console.Read();
+        }
+
+        public static void findThis(string SheetLink, string RangeOnSheet, string DataWanted, int HowFarToGo)
+        {
+            IList<IList<Object>> values = SearchSheet(SheetLink, RangeOnSheet);
+            int rowCounter = 0;
+
+            if (values != null && values.Count > 0)
+            {
+                foreach (var row in values) //for each row in the sheet
+                {
+                    rowCounter++;
+                    if (row != null && row.Count > 0 && row[0] != null) //if the row is not null or empty.
+                    {
+                        // Print columns A and E, which correspond to indices 0 and 4.
+                        if (row[0].ToString() == DataWanted && row[0] != null)
+                        {
+                            if (row.Count < HowFarToGo)
+                            {
+                                for (int i = 0; i < row.Count; i++)// prints contents of row
+                                {
+                                    if (row[i] != "")
+                                    {
+                                        Console.Write(row[i] + ", ");
+                                        //Console.WriteLine("Row " + rowCounter+": Column " + GetColumnName(i));
+                                        Console.WriteLine(GetColumnName(i) + ":" + rowCounter);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int i = 0; i < HowFarToGo; i++)
+                                {
+                                    if (row[i] != "")
+                                    {
+                                        Console.Write(row[i] + ", ");
+                                        Console.WriteLine(values[i]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("No data found.");
+            }
+            Console.Read();
+
+
+        }
+
+
+
+        /// <summary>
+        /// Gets Column's letters, starts at A no matter where the item actually is.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        static string GetColumnName(int index)
+        {
+            const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            var value = "";
+
+            if (index >= letters.Length)
+            {
+                value += letters[index / letters.Length - 1];
+            }
+
+            value += letters[index % letters.Length];
+
+            return value;
         }
 
     }

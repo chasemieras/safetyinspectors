@@ -201,19 +201,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chase Mieras\\.nuget\\packages\\": {}
+    "C:\\Users\\gamep\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+      "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
       "projectName": "GoogleSheetHelper",
-      "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
-      "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\obj\\",
+      "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+      "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
