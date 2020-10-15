@@ -42,6 +42,7 @@
             this.LabelsConditionStepPod = new System.Windows.Forms.CheckBox();
             this.TopConditionStepPod = new System.Windows.Forms.CheckBox();
             this.PlatformConditionStepPod = new System.Windows.Forms.CheckBox();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.LadderInspectionStepPod.SuspendLayout();
             this.ActionStepPod.SuspendLayout();
             this.LadderConditionSetpPod.SuspendLayout();
@@ -49,6 +50,7 @@
             // 
             // LadderInspectionStepPod
             // 
+            this.LadderInspectionStepPod.Controls.Add(this.vScrollBar1);
             this.LadderInspectionStepPod.Controls.Add(this.NextButtonStepPod);
             this.LadderInspectionStepPod.Controls.Add(this.ActionStepPod);
             this.LadderInspectionStepPod.Controls.Add(this.LadderConditionSetpPod);
@@ -199,6 +201,13 @@
             this.PlatformConditionStepPod.Text = "Platform: Cracked or bent. ";
             this.PlatformConditionStepPod.UseVisualStyleBackColor = true;
             // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(317, 11);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 369);
+            this.vScrollBar1.TabIndex = 11;
+            // 
             // StepAndPodiumLadder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -232,5 +241,6 @@
         private System.Windows.Forms.CheckBox LabelsConditionStepPod;
         private System.Windows.Forms.CheckBox TopConditionStepPod;
         private System.Windows.Forms.CheckBox PlatformConditionStepPod;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
