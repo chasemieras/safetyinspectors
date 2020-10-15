@@ -185,16 +185,18 @@ namespace GoogleSheetHelper
         {
             IList<IList<Object>> values = SearchSheet(SheetLink, RangeOnSheet);
             int rowCounter = 0;
+            int columnCounter = 0;
 
             if (values != null && values.Count > 0)
             {
                 foreach (var row in values) //for each row in the sheet
                 {
+                    columnCounter = 0;
                     rowCounter++;
                     if (row != null && row.Count > 0 && row[0] != null) //if the row is not null or empty.
                     {
                         // Print columns A and E, which correspond to indices 0 and 4.
-                        if (row[0].ToString() == DataWanted && row[0] != null)
+                        if (row[1].ToString() == DataWanted && row[1] != null)
                         {
                             if (row.Count < HowFarToGo)
                             {
@@ -204,8 +206,9 @@ namespace GoogleSheetHelper
                                     {
                                         Console.Write(row[i] + ", ");
                                         //Console.WriteLine("Row " + rowCounter+": Column " + GetColumnName(i));
-                                        Console.WriteLine(GetColumnName(i) + ":" + rowCounter);
+                                        Console.WriteLine(GetColumnName(columnCounter) + ":" + rowCounter);
                                     }
+                                    columnCounter++;
                                 }
                             }
                             else
