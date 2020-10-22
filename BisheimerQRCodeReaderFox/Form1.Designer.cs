@@ -40,7 +40,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(419, 79);
+            this.btnStart.Location = new System.Drawing.Point(314, 58);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 34);
+            this.label1.Location = new System.Drawing.Point(12, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 1;
@@ -61,16 +61,16 @@
             // cboCamera
             // 
             this.cboCamera.FormattingEnabled = true;
-            this.cboCamera.Location = new System.Drawing.Point(116, 31);
+            this.cboCamera.Location = new System.Drawing.Point(69, 58);
             this.cboCamera.Name = "cboCamera";
             this.cboCamera.Size = new System.Drawing.Size(239, 23);
             this.cboCamera.TabIndex = 2;
             // 
             // PictureBox
             // 
-            this.PictureBox.Location = new System.Drawing.Point(12, 79);
+            this.PictureBox.Location = new System.Drawing.Point(12, 87);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(401, 386);
+            this.PictureBox.Size = new System.Drawing.Size(401, 378);
             this.PictureBox.TabIndex = 3;
             this.PictureBox.TabStop = false;
             // 

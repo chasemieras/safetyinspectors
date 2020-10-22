@@ -104,6 +104,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "StarterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Safety Inspection Form";
             this.FormSelectGroup.ResumeLayout(false);
             this.FormSelectGroup.PerformLayout();

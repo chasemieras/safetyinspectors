@@ -215,6 +215,7 @@
             this.ClientSize = new System.Drawing.Size(684, 476);
             this.Controls.Add(this.LadderInspectGroup);
             this.Name = "LadderFormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Safety Inspection Form";
             this.LadderInspectGroup.ResumeLayout(false);
             this.LadderMaterial.ResumeLayout(false);

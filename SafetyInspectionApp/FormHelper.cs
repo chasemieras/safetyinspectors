@@ -23,15 +23,24 @@ namespace SafetyInspectionApp
 
             nextForm.MinimumSize = new Size(formSettings.FORM_MIN_WIDTH, formSettings.FORM_HEIGHT);
             nextForm.MaximumSize = new Size(formSettings.FORM_MAX_WIDTH, formSettings.FORM_HEIGHT);
+
+            nextForm.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            nextForm.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            nextForm.ClientSize = new System.Drawing.Size(800, 450);
+            nextForm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            nextForm.Text = "Safety Inspection Form";
+
             nextForm.Visible = true;
 
             previousForm.Visible = false;
+
         }
 
         public void createYesNoSectionCondition(string sectionName, int locationX, int locationY, Panel currentForm)
         {
             RadioButton yesButton = new System.Windows.Forms.RadioButton();
             RadioButton noButton = new System.Windows.Forms.RadioButton();
+            RadioButton naButton = new System.Windows.Forms.RadioButton();
             Label label = new System.Windows.Forms.Label();
             GroupBox sectionGroup = new System.Windows.Forms.GroupBox();
 
@@ -41,6 +50,7 @@ namespace SafetyInspectionApp
             sectionGroup.Controls.Add(label);
             sectionGroup.Controls.Add(yesButton);
             sectionGroup.Controls.Add(noButton);
+            sectionGroup.Controls.Add(naButton);
             sectionGroup.Location = new System.Drawing.Point(locationX, locationY);
             sectionGroup.Name = sectionName + "Section";
             sectionGroup.Size = new System.Drawing.Size(250, 80);
@@ -91,13 +101,25 @@ namespace SafetyInspectionApp
             // noButton
             // 
             noButton.AutoSize = true;
-            noButton.Location = new System.Drawing.Point(5, 55);
+            noButton.Location = new System.Drawing.Point(50, 35);
             noButton.Name = sectionName + "No";
             noButton.Size = new System.Drawing.Size(94, 19);
             noButton.TabIndex = 2;
             noButton.TabStop = true;
             noButton.Text = "No";
             noButton.UseVisualStyleBackColor = true;
+
+            // 
+            // naButton
+            // 
+            naButton.AutoSize = true;
+            naButton.Location = new System.Drawing.Point(95, 35);
+            naButton.Name = sectionName + "NA";
+            naButton.Size = new System.Drawing.Size(94, 19);
+            naButton.TabIndex = 2;
+            naButton.TabStop = true;
+            naButton.Text = "N/A";
+            naButton.UseVisualStyleBackColor = true;
 
             currentForm.Controls.Add(sectionGroup);
         }

@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.NextButtonExten);
             this.Name = "ExtensionLadder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExtensionLadder";
             this.Load += new System.EventHandler(this.ExtensionLadder_Load);
             this.ResumeLayout(false);

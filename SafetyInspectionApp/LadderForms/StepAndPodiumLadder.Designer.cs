@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.NextButtonStepPod);
             this.Name = "StepAndPodiumLadder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Safety Inspection Form";
             this.Load += new System.EventHandler(this.StepAndPodiumLadder_Load);
             this.ResumeLayout(false);

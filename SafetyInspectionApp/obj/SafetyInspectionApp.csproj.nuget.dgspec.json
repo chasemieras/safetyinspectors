@@ -1,25 +1,94 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {}
+    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {
+    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
-        "projectName": "GoogleSheetHelper",
-        "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
-        "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\obj\\",
+        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj",
+        "projectName": "QRCodeReader",
+        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj",
+        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AForge": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "AForge.Video": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "AForge.Video.DirectShow": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+        "projectName": "GoogleSheetHelper",
+        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -62,26 +131,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {
+    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
+        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
         "projectName": "SafetyInspectionApp",
-        "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
-        "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\obj\\",
+        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
+        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -93,8 +158,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {
-                "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj"
+              "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj": {
+                "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj"
+              },
+              "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {
+                "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj"
               }
             }
           }
@@ -125,7 +193,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
