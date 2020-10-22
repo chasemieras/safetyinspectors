@@ -32,14 +32,14 @@ namespace SafetyInspectionApp
             conditionGroup.BorderStyle = BorderStyle.FixedSingle;
             this.Controls.Add(conditionGroup);
 
-            formHelper.createYesNoSectionCondition("steps", locationX, locationY + locationAddition * 0, conditionGroup);
-            formHelper.createYesNoSectionCondition("rails", locationX, locationY + locationAddition * 1, conditionGroup);
-            formHelper.createYesNoSectionCondition("labels", locationX, locationY + locationAddition * 2, conditionGroup);
-            formHelper.createYesNoSectionCondition("platform", locationX, locationY + locationAddition * 3, conditionGroup);
-            formHelper.createYesNoSectionCondition("top", locationX, locationY + locationAddition * 4, conditionGroup);
-            formHelper.createYesNoSectionCondition("spreader", locationX, locationY + locationAddition * 5, conditionGroup);
-            formHelper.createYesNoSectionCondition("general", locationX, locationY + locationAddition * 6, conditionGroup);
-            formHelper.createYesNoSectionCondition("other", locationX, locationY + locationAddition * 7, conditionGroup);
+            formHelper.createConditionSection("steps", locationX, locationY + locationAddition * 0, conditionGroup);
+            formHelper.createConditionSection("rails", locationX, locationY + locationAddition * 1, conditionGroup);
+            formHelper.createConditionSection("labels", locationX, locationY + locationAddition * 2, conditionGroup);
+            formHelper.createConditionSection("platform", locationX, locationY + locationAddition * 3, conditionGroup);
+            formHelper.createConditionSection("top", locationX, locationY + locationAddition * 4, conditionGroup);
+            formHelper.createConditionSection("spreader", locationX, locationY + locationAddition * 5, conditionGroup);
+            formHelper.createConditionSection("general", locationX, locationY + locationAddition * 6, conditionGroup);
+            formHelper.createConditionSection("other", locationX, locationY + locationAddition * 7, conditionGroup);
 
         }
 

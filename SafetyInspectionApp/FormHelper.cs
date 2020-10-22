@@ -28,7 +28,7 @@ namespace SafetyInspectionApp
             previousForm.Visible = false;
         }
 
-        public void createYesNoSectionCondition(string sectionName, int locationX, int locationY, Panel currentForm)
+        public void createConditionSection(string sectionName, int locationX, int locationY, Panel currentForm)
         {
             RadioButton yesButton = new System.Windows.Forms.RadioButton();
             RadioButton noButton = new System.Windows.Forms.RadioButton();
@@ -91,7 +91,7 @@ namespace SafetyInspectionApp
             // noButton
             // 
             noButton.AutoSize = true;
-            noButton.Location = new System.Drawing.Point(5, 55);
+            noButton.Location = new System.Drawing.Point(50, 35);
             noButton.Name = sectionName + "No";
             noButton.Size = new System.Drawing.Size(94, 19);
             noButton.TabIndex = 2;
