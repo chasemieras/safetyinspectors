@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafetyInspectionApp", "Safe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleSheetHelper", "Helper\GoogleSheetHelper.csproj", "{EDC138D9-E352-4BBF-9422-F2E97CDDFA66}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRCodeReader", "..\BisheimerQRCodeReaderFox\BisheimerQRCodeReaderFox\QRCodeReader.csproj", "{26A7664B-7031-4C73-B0B6-D2172DCE7B9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCam QR Code Scanner", "WebCam QR Code Scanner\WebCam QR Code Scanner.csproj", "{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{EDC138D9-E352-4BBF-9422-F2E97CDDFA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDC138D9-E352-4BBF-9422-F2E97CDDFA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDC138D9-E352-4BBF-9422-F2E97CDDFA66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26A7664B-7031-4C73-B0B6-D2172DCE7B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26A7664B-7031-4C73-B0B6-D2172DCE7B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26A7664B-7031-4C73-B0B6-D2172DCE7B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26A7664B-7031-4C73-B0B6-D2172DCE7B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3338B811-0A07-47BA-96D8-17FD2C7BC2E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

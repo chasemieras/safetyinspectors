@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "GoogleSheetHelper/1.0.0": {
+      "SafetyInspectionApp/1.0.0": {
         "dependencies": {
-          "Google.Apis.Sheets.v4": "1.49.0.2091"
+          "GoogleSheetHelper": "1.0.0"
         },
         "runtime": {
-          "GoogleSheetHelper.dll": {}
+          "SafetyInspectionApp.dll": {}
         }
       },
       "Google.Apis/1.49.0": {
@@ -71,11 +71,19 @@
             "fileVersion": "12.0.3.23909"
           }
         }
+      },
+      "GoogleSheetHelper/1.0.0": {
+        "dependencies": {
+          "Google.Apis.Sheets.v4": "1.49.0.2091"
+        },
+        "runtime": {
+          "GoogleSheetHelper.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "GoogleSheetHelper/1.0.0": {
+    "SafetyInspectionApp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -114,6 +122,11 @@
       "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "GoogleSheetHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
