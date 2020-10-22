@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {}
+    "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {
+    "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
-        "projectName": "GoogleSheetHelper",
-        "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+        "projectUniqueName": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj",
+        "projectName": "QRCodeReader",
+        "projectPath": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj",
         "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\Helper\\obj\\",
+        "outputPath": "C:\\Users\\gamep\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,9 +42,21 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Google.Apis.Sheets.v4": {
+            "AForge": {
               "target": "Package",
-              "version": "[1.49.0.2091, )"
+              "version": "[2.2.5, )"
+            },
+            "AForge.Video": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "AForge.Video.DirectShow": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.6, )"
             }
           },
           "imports": [
@@ -60,6 +72,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
