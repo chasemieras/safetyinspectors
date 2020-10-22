@@ -37,15 +37,15 @@ namespace SafetyInspectionApp.LadderForms
             conditionGroup.BorderStyle = BorderStyle.FixedSingle;
             this.Controls.Add(conditionGroup);
 
-            formHelper.createConditionSection("rungs", locationX, locationY + locationAddition * 0, conditionGroup);
-            formHelper.createConditionSection("rails", locationX, locationY + locationAddition * 1, conditionGroup);
-            formHelper.createConditionSection("labels", locationX, locationY + locationAddition * 2, conditionGroup);
-            formHelper.createConditionSection("rung locks", locationX, locationY + locationAddition * 3, conditionGroup);
-            formHelper.createConditionSection("hardware", locationX, locationY + locationAddition * 4, conditionGroup);
-            formHelper.createConditionSection("shoes", locationX, locationY + locationAddition * 5, conditionGroup);
-            formHelper.createConditionSection("rope or pulley", locationX, locationY + locationAddition * 5, conditionGroup);
-            formHelper.createConditionSection("general", locationX, locationY + locationAddition * 6, conditionGroup);
-            formHelper.createConditionSection("other", locationX, locationY + locationAddition * 7, conditionGroup);
+            formHelper.createYesNoSectionCondition("rungs", locationX, locationY + locationAddition * 0, conditionGroup);
+            formHelper.createYesNoSectionCondition("rails", locationX, locationY + locationAddition * 1, conditionGroup);
+            formHelper.createYesNoSectionCondition("labels", locationX, locationY + locationAddition * 2, conditionGroup);
+            formHelper.createYesNoSectionCondition("rung locks", locationX, locationY + locationAddition * 3, conditionGroup);
+            formHelper.createYesNoSectionCondition("hardware", locationX, locationY + locationAddition * 4, conditionGroup);
+            formHelper.createYesNoSectionCondition("shoes", locationX, locationY + locationAddition * 5, conditionGroup);
+            formHelper.createYesNoSectionCondition("rope or pulley", locationX, locationY + locationAddition * 5, conditionGroup);
+            formHelper.createYesNoSectionCondition("general", locationX, locationY + locationAddition * 6, conditionGroup);
+            formHelper.createYesNoSectionCondition("other", locationX, locationY + locationAddition * 7, conditionGroup);
         }
     }
 }
