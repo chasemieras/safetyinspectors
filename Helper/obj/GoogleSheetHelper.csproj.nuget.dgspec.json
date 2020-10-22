@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {}
+    "C:\\Users\\angie\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {
+    "C:\\Users\\angie\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+        "projectUniqueName": "C:\\Users\\angie\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
         "projectName": "GoogleSheetHelper",
-        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
-        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\Helper\\obj\\",
+        "projectPath": "C:\\Users\\angie\\Source\\Repos\\safetyinspectors\\Helper\\GoogleSheetHelper.csproj",
+        "packagesPath": "C:\\Users\\angie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\angie\\Source\\Repos\\safetyinspectors\\Helper\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\angie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
