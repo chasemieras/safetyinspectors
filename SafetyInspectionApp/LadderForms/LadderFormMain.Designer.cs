@@ -56,11 +56,11 @@
             this.LadderInspectGroup.Controls.Add(this.LadderMaterial);
             this.LadderInspectGroup.Controls.Add(this.LadderType);
             this.LadderInspectGroup.Controls.Add(this.LadderInfo);
-            this.LadderInspectGroup.Location = new System.Drawing.Point(250, 12);
-            this.LadderInspectGroup.MaximumSize = new System.Drawing.Size(440, 900);
-            this.LadderInspectGroup.MinimumSize = new System.Drawing.Size(220, 450);
+            this.LadderInspectGroup.Location = new System.Drawing.Point(123, 12);
+            this.LadderInspectGroup.MaximumSize = new System.Drawing.Size(440, 450);
+            this.LadderInspectGroup.MinimumSize = new System.Drawing.Size(440, 450);
             this.LadderInspectGroup.Name = "LadderInspectGroup";
-            this.LadderInspectGroup.Size = new System.Drawing.Size(220, 450);
+            this.LadderInspectGroup.Size = new System.Drawing.Size(440, 450);
             this.LadderInspectGroup.TabIndex = 0;
             this.LadderInspectGroup.TabStop = false;
             this.LadderInspectGroup.Text = "Ladder Inspection";
@@ -71,7 +71,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NextLadderFormButton.Location = new System.Drawing.Point(33, 329);
             this.NextLadderFormButton.Name = "NextLadderFormButton";
-            this.NextLadderFormButton.Size = new System.Drawing.Size(157, 25);
+            this.NextLadderFormButton.Size = new System.Drawing.Size(377, 25);
             this.NextLadderFormButton.TabIndex = 4;
             this.NextLadderFormButton.Text = "Next";
             this.NextLadderFormButton.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.LadderMaterial.Controls.Add(this.FiberglassRadioButton);
             this.LadderMaterial.Location = new System.Drawing.Point(30, 234);
             this.LadderMaterial.Name = "LadderMaterial";
-            this.LadderMaterial.Size = new System.Drawing.Size(163, 89);
+            this.LadderMaterial.Size = new System.Drawing.Size(383, 89);
             this.LadderMaterial.TabIndex = 3;
             this.LadderMaterial.TabStop = false;
             this.LadderMaterial.Text = "Ladder Material";
@@ -121,7 +121,7 @@
             this.LadderType.Controls.Add(this.SetpLadderRadioButton);
             this.LadderType.Location = new System.Drawing.Point(30, 126);
             this.LadderType.Name = "LadderType";
-            this.LadderType.Size = new System.Drawing.Size(163, 114);
+            this.LadderType.Size = new System.Drawing.Size(383, 114);
             this.LadderType.TabIndex = 3;
             this.LadderType.TabStop = false;
             this.LadderType.Text = "Ladder Type";
@@ -158,6 +158,7 @@
             this.SetpLadderRadioButton.TabStop = true;
             this.SetpLadderRadioButton.Text = "Step Ladder";
             this.SetpLadderRadioButton.UseVisualStyleBackColor = true;
+            
             // 
             // LadderInfo
             // 
@@ -169,7 +170,7 @@
             this.LadderInfo.Controls.Add(this.label1);
             this.LadderInfo.Location = new System.Drawing.Point(30, 22);
             this.LadderInfo.Name = "LadderInfo";
-            this.LadderInfo.Size = new System.Drawing.Size(163, 100);
+            this.LadderInfo.Size = new System.Drawing.Size(383, 100);
             this.LadderInfo.TabIndex = 2;
             this.LadderInfo.TabStop = false;
             this.LadderInfo.Text = "Basic Ladder Info";

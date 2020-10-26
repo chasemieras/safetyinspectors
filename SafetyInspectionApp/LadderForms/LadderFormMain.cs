@@ -24,18 +24,9 @@ namespace SafetyInspectionApp
         {
 
             Form nextLadderForm;
+            nextLadderForm = new LadderForms.ConditionForm();
+            formHelper.setUpForm(nextLadderForm, this);
 
-
-            if (ExtensionRadioButton.Checked == true)
-            {
-                nextLadderForm = new LadderForms.ExtensionLadder();
-                formHelper.setUpForm(nextLadderForm, this);
-            }
-            else if (PodiumRadioButton.Checked == true || SetpLadderRadioButton.Checked == true)
-            {
-                nextLadderForm = new StepAndPodiumLadder();
-                formHelper.setUpForm(nextLadderForm, this);
-            }
         }
     }
 }

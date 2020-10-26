@@ -10,8 +10,15 @@ namespace SafetyInspectionApp
         private static int fORM_MIN_WIDTH = 750;
         private static int fORM_MAX_WIDTH = 900;
 
-        public int FORM_HEIGHT { get => fORM_HEIGHT; set => fORM_HEIGHT = value; }
-        public int FORM_MIN_WIDTH { get => fORM_MIN_WIDTH; set => fORM_MIN_WIDTH = value; }
-        public int FORM_MAX_WIDTH { get => fORM_MAX_WIDTH; set => fORM_MAX_WIDTH = value; }
+        private static int gROUPING_HEIGHT = 440;
+        private static int gROUPING_WIDTH = 450;
+
+        public int FORM_HEIGHT { get => fORM_HEIGHT;}
+        public int FORM_MIN_WIDTH { get => fORM_MIN_WIDTH;}
+        public int FORM_MAX_WIDTH { get => fORM_MAX_WIDTH;}
+
+        public int GROUPING_HEIGHT { get => gROUPING_HEIGHT; }
+        public int GROUPING_WIDTH { get => gROUPING_WIDTH; }
+
     }
 }
