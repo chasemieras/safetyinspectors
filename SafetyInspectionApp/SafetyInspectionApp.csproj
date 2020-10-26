@@ -6,9 +6,4 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BisheimerQRCodeReaderFox\QRCodeReader.csproj" />
-    <ProjectReference Include="..\Helper\GoogleSheetHelper.csproj" />
-  </ItemGroup>
-
 </Project>

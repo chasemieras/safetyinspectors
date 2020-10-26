@@ -177,11 +177,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj",
+      "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\QRCodeReader\\QRCodeReader.csproj",
       "projectName": "QRCodeReader",
-      "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\QRCodeReader.csproj",
+      "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\QRCodeReader\\QRCodeReader.csproj",
       "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\BisheimerQRCodeReaderFox\\obj\\",
+      "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\QRCodeReader\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",

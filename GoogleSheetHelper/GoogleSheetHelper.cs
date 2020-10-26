@@ -18,19 +18,27 @@ namespace GoogleSheetHelper
         static string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static string ApplicationName = "ConsoleAppWriteTo";
         static string SheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
-
+        //static string SheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
         static void Main(string[] args)
         {
-            List<IList<Object>> objNewRecords = new List<IList<Object>>(); 
-            IList<Object> obj = new List<Object>(); 
-            obj.Add("Column - 1"); 
+            List<IList<Object>> objNewRecords = new List<IList<Object>>();
+            IList<Object> obj = new List<Object>();
+            obj.Add("Column - 1");
             obj.Add("Column - 2");
             obj.Add("");
-            obj.Add("Column - 3"); 
+            obj.Add("Column - 3");
             objNewRecords.Add(obj);
-            //NextLinePrint(objNewRecords, SheetId, "A7:D7", AuthorizeAccess());
-            findThis(SheetId, "A1:D10", "Column - 2", 4);
+            //UpdatGoogleSheet(objNewRecords, SheetId, "A7:D7", AuthorizeAccess());
+            //DataFinder(SheetId, "A1:D10", "Alexandra", 4);
+            //findThis("A1:F31", "FL", 6);
         }
+
+
+        public void WriteToSheet(List<IList<Object>> dataToInsert)
+        {
+            UpdatGoogleSheet(dataToInsert, SheetId, "A1:F24", AuthorizeAccess());
+        }
+
 
         /// <summary>
         /// Authorizes our request to access Google's API
@@ -91,7 +99,7 @@ namespace GoogleSheetHelper
         /// Will inset all the things as strings. If you want data in proper format then change the 
         /// ValueInputOptionEnum.RAW to .USERENTERED
         /// </summary>
-        private static void NextLinePrint(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
+        private void UpdatGoogleSheet(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
         {
             SpreadsheetsResource.ValuesResource.AppendRequest request =
                service.Spreadsheets.Values.Append(new ValueRange() { Values = values }, spreadsheetId, newRange);
@@ -130,93 +138,56 @@ namespace GoogleSheetHelper
         /// <param name="RangeOnSheet"></param>
         /// <param name="DataWanted"></param>
         /// <param name="HowFarToGo"></param>
-        public static void DataFinder(string SheetLink, string RangeOnSheet, string DataWanted, int HowFarToGo)
+        public string[] findThis(string RangeOnSheet, string DataWanted, int HowFarToGo)
         {
-            IList<IList<Object>> values = SearchSheet(SheetLink, RangeOnSheet);
-            int valuesCount = 0;
-
-            if (values != null && values.Count > 0)
-            {
-                foreach (var row in values)
-                {
-                    //valuesCount++;
-                    if (row != null && row.Count > 0 && row[0] != null)
-                    {
-
-                        // Print columns A and E, which correspond to indices 0 and 4.
-                        if (row[0].ToString() == DataWanted && row[0] != null)
-                        {
-                            if (row.Count < HowFarToGo)
-                            {
-                                for (int i = 0; i < row.Count; i++)
-                                {
-                                    if (row[i] != "")
-                                    {
-                                        valuesCount++;
-                                        //Console.Write(row[i] + ", ");
-                                        Console.WriteLine(i + " " + valuesCount);
-                                    }
-                                }
-                            }else
-                            {
-                                for (int i = 0; i < HowFarToGo; i++)
-                                {
-                                    if (row[i] != "")
-                                    {
-                                        valuesCount++;
-                                        //Console.Write(row[i] + ", ");
-                                        Console.WriteLine(i + " " + valuesCount);
-                                    }
-                                }
-                            }
-                        }
-                        //Console.WriteLine("Next Item");
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("No data found.");
-            }
-            Console.Read();
-        }
-
-        public static void findThis(string SheetLink, string RangeOnSheet, string DataWanted, int HowFarToGo)
-        {
-            IList<IList<Object>> values = SearchSheet(SheetLink, RangeOnSheet);
+            string SheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
+            IList<IList<Object>> values = SearchSheet(SheetId, RangeOnSheet);
             int rowCounter = 0;
+            string[] cells = new string[7];
 
             if (values != null && values.Count > 0)
             {
                 foreach (var row in values) //for each row in the sheet
                 {
                     rowCounter++;
+                    //Console.WriteLine("through row " + rowCounter);
+
                     if (row != null && row.Count > 0 && row[0] != null) //if the row is not null or empty.
                     {
-                        // Print columns A and E, which correspond to indices 0 and 4.
-                        if (row[0].ToString() == DataWanted && row[0] != null)
+                        for (int j = 0; j < HowFarToGo - 1; j++)
                         {
-                            if (row.Count < HowFarToGo)
+
+                            //Console.WriteLine(j + " column");
+                            // Print columns A and E, which correspond to indices 0 and 4.
+                            if (row[j].ToString() == DataWanted && row[j] != null)
                             {
-                                for (int i = 0; i < row.Count; i++)// prints contents of row
+                                if (row.Count < HowFarToGo)
                                 {
-                                    if (row[i] != "")
+                                    for (int i = 0; i < row.Count; i++)// prints contents of row
                                     {
-                                        Console.Write(row[i] + ", ");
-                                        //Console.WriteLine("Row " + rowCounter+": Column " + GetColumnName(i));
-                                        Console.WriteLine(GetColumnName(i) + ":" + rowCounter);
+                                        if (row[i] != "")
+                                        {
+                                            Console.Write(row[i] + ", ");
+                                            //Console.WriteLine("Row " + rowCounter+": Column " + GetColumnName(i));
+                                            Console.Write(GetColumnName(i) + ":" + rowCounter);
+                                            cells[i] = row[i] + ", " + GetColumnName(i) + ":" + rowCounter;
+                                        }
                                     }
                                 }
-                            }
-                            else
-                            {
-                                for (int i = 0; i < HowFarToGo; i++)
+                                else
                                 {
-                                    if (row[i] != "")
+                                    for (int i = 0; i < HowFarToGo; i++)
                                     {
-                                        Console.Write(row[i] + ", ");
-                                        Console.WriteLine(values[i]);
+                                        if (row[i] != "")
+                                        {
+                                            Console.Write(row[i] + ", ");
+                                            //Console.WriteLine("Row " + rowCounter+": Column " + GetColumnName(i));
+                                            Console.Write(GetColumnName(i) + ":" + rowCounter + ", ");
+                                            cells[i] = row[i] + ", " + GetColumnName(i) + ":" + rowCounter;
+                                        }
                                     }
+
+                                    Console.WriteLine(" ");
                                 }
                             }
                         }
@@ -228,17 +199,14 @@ namespace GoogleSheetHelper
                 Console.WriteLine("No data found.");
             }
             Console.Read();
-
+            return cells;
+            
 
         }
 
 
 
-        /// <summary>
-        /// Gets Column's letters, starts at A no matter where the item actually is.
-        /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+
         static string GetColumnName(int index)
         {
             const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
