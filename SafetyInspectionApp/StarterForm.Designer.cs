@@ -33,13 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.FormSelectGroup = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.startCamera = new System.Windows.Forms.Button();
+            this.cameraDisplay = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.systemCameraList = new System.Windows.Forms.ComboBox();
+            this.cameraTicker = new System.Windows.Forms.Timer(this.components);
             this.FormSelectGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -70,10 +70,10 @@
             // 
             // FormSelectGroup
             // 
-            this.FormSelectGroup.Controls.Add(this.button1);
-            this.FormSelectGroup.Controls.Add(this.pictureBox1);
+            this.FormSelectGroup.Controls.Add(this.startCamera);
+            this.FormSelectGroup.Controls.Add(this.cameraDisplay);
             this.FormSelectGroup.Controls.Add(this.label3);
-            this.FormSelectGroup.Controls.Add(this.comboBox1);
+            this.FormSelectGroup.Controls.Add(this.systemCameraList);
             this.FormSelectGroup.Location = new System.Drawing.Point(228, 86);
             this.FormSelectGroup.Name = "FormSelectGroup";
             this.FormSelectGroup.Size = new System.Drawing.Size(343, 331);
@@ -81,39 +81,45 @@
             this.FormSelectGroup.TabStop = false;
             this.FormSelectGroup.Text = "Form Selection";
             // 
-            // button1
+            // startCamera
             // 
-            this.button1.Location = new System.Drawing.Point(279, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.startCamera.Location = new System.Drawing.Point(279, 21);
+            this.startCamera.Name = "startCamera";
+            this.startCamera.Size = new System.Drawing.Size(58, 23);
+            this.startCamera.TabIndex = 8;
+            this.startCamera.Text = "Start";
+            this.startCamera.UseVisualStyleBackColor = true;
+            this.startCamera.Click += new System.EventHandler(this.startCamera_Click);
             // 
-            // pictureBox1
+            // cameraDisplay
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 274);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.cameraDisplay.Location = new System.Drawing.Point(6, 51);
+            this.cameraDisplay.Name = "cameraDisplay";
+            this.cameraDisplay.Size = new System.Drawing.Size(331, 274);
+            this.cameraDisplay.TabIndex = 7;
+            this.cameraDisplay.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.label3.Text = "Camera";
             // 
-            // comboBox1
+            // systemCameraList
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(50, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 23);
-            this.comboBox1.TabIndex = 5;
+            this.systemCameraList.FormattingEnabled = true;
+            this.systemCameraList.Location = new System.Drawing.Point(54, 21);
+            this.systemCameraList.Name = "systemCameraList";
+            this.systemCameraList.Size = new System.Drawing.Size(222, 23);
+            this.systemCameraList.TabIndex = 5;
+            // 
+            // cameraTicker
+            // 
+            this.cameraTicker.Interval = 1000;
+            this.cameraTicker.Tick += new System.EventHandler(this.cameraTicker_Tick);
             // 
             // StarterForm
             // 
@@ -127,10 +133,11 @@
             this.Name = "StarterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Safety Inspection Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StarterForm_FormClosing);
             this.Load += new System.EventHandler(this.StarterForm_Load);
             this.FormSelectGroup.ResumeLayout(false);
             this.FormSelectGroup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,10 +151,11 @@
         private System.Windows.Forms.GroupBox FormSelectGroup;
 
         //Camera Code
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox cameraDisplay;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox systemCameraList;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button startCamera;
+        private System.Windows.Forms.Timer cameraTicker;
     }
 }
