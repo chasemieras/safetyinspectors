@@ -5,6 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using AForge;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
 
 namespace SafetyInspectionApp
 {
@@ -12,19 +16,19 @@ namespace SafetyInspectionApp
     {
 
         FormHelper formHelper = new FormHelper();
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice videoCaptureDevice;
+
         public StarterForm()
         {
             InitializeComponent();
         }
 
-        private void MainNextButton_Click(object sender, EventArgs e)
+        private void StarterForm_Load(object sender, EventArgs e)
         {
-            Form selectedForm;
-            if (LadderForm.Checked == true)
-            {
-                selectedForm = new LadderFormMain();
-                formHelper.setUpForm(selectedForm, this);
-            }
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo Device in filterInfoCollection);
+            videoCaptureDevice = new VideoCaptureDevice();
         }
     }
 }
