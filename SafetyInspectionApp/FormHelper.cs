@@ -10,6 +10,8 @@ namespace SafetyInspectionApp
 {
     public class FormHelper
     {
+        int ladderLocationAddition = 75;
+
         /// <summary>
         /// Sets up the next form that the program wants to pull up.
         /// </summary>
@@ -37,6 +39,10 @@ namespace SafetyInspectionApp
 
         }
 
+        /// <summary>
+        /// Sets up the ladder parts by making an array of the parts
+        /// </summary>
+        /// <returns>an array list of ladder parts</returns>
         private ArrayList ladderConditionSetUp() {
             ArrayList ladderParts = new ArrayList();
             ladderParts.Add("steps");
@@ -57,10 +63,15 @@ namespace SafetyInspectionApp
             return ladderParts;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="locationX"></param>
+        /// <param name="locationY"></param>
+        /// <param name="currentForm"></param>
         public void createSectionLadderCondition(int locationX, int locationY, Panel currentForm)
         {
             ArrayList ladderParts = ladderConditionSetUp();
-            int locationAddition = 75;
 
             for (int i = 0; i < ladderParts.Count; i++) 
             {
@@ -77,7 +88,7 @@ namespace SafetyInspectionApp
                 sectionGroup.Controls.Add(yesButton);
                 sectionGroup.Controls.Add(noButton);
                 sectionGroup.Controls.Add(naButton);
-                sectionGroup.Location = new System.Drawing.Point(locationX, locationY + locationAddition * i);
+                sectionGroup.Location = new System.Drawing.Point(locationX, locationY + ladderLocationAddition * i);
                 sectionGroup.Name = (string)ladderParts[i] + "Section";
                 sectionGroup.Size = new System.Drawing.Size(300, 80);
 
@@ -151,4 +162,5 @@ namespace SafetyInspectionApp
             }
         }
     }
+
 }

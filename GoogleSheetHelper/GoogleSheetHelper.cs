@@ -18,22 +18,11 @@ namespace GoogleSheetHelper
         static string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static string ApplicationName = "ConsoleAppWriteTo";
         static string SheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
-        //static string SheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
-        static void Main(string[] args)
-        {
-            List<IList<Object>> objNewRecords = new List<IList<Object>>();
-            IList<Object> obj = new List<Object>();
-            obj.Add("Column - 1");
-            obj.Add("Column - 2");
-            obj.Add("");
-            obj.Add("Column - 3");
-            objNewRecords.Add(obj);
-            //UpdatGoogleSheet(objNewRecords, SheetId, "A7:D7", AuthorizeAccess());
-            //DataFinder(SheetId, "A1:D10", "Alexandra", 4);
-            //findThis("A1:F31", "FL", 6);
-        }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dataToInsert"></param>
         public void WriteToSheet(List<IList<Object>> dataToInsert)
         {
             UpdatGoogleSheet(dataToInsert, SheetId, "A1:F24", AuthorizeAccess());
@@ -130,14 +119,13 @@ namespace GoogleSheetHelper
             return values;
         }
 
-
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="SheetLink"></param>
         /// <param name="RangeOnSheet"></param>
         /// <param name="DataWanted"></param>
         /// <param name="HowFarToGo"></param>
+        /// <returns></returns>
         public string[] findThis(string RangeOnSheet, string DataWanted, int HowFarToGo)
         {
             string SheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
@@ -150,14 +138,12 @@ namespace GoogleSheetHelper
                 foreach (var row in values) //for each row in the sheet
                 {
                     rowCounter++;
-                    //Console.WriteLine("through row " + rowCounter);
 
                     if (row != null && row.Count > 0 && row[0] != null) //if the row is not null or empty.
                     {
                         for (int j = 0; j < HowFarToGo - 1; j++)
                         {
 
-                            //Console.WriteLine(j + " column");
                             // Print columns A and E, which correspond to indices 0 and 4.
                             if (row[j].ToString() == DataWanted && row[j] != null)
                             {
@@ -167,9 +153,6 @@ namespace GoogleSheetHelper
                                     {
                                         if (row[i] != "")
                                         {
-                                            Console.Write(row[i] + ", ");
-                                            //Console.WriteLine("Row " + rowCounter+": Column " + GetColumnName(i));
-                                            Console.Write(GetColumnName(i) + ":" + rowCounter);
                                             cells[i] = row[i] + ", " + GetColumnName(i) + ":" + rowCounter;
                                         }
                                     }
@@ -180,33 +163,27 @@ namespace GoogleSheetHelper
                                     {
                                         if (row[i] != "")
                                         {
-                                            Console.Write(row[i] + ", ");
-                                            //Console.WriteLine("Row " + rowCounter+": Column " + GetColumnName(i));
-                                            Console.Write(GetColumnName(i) + ":" + rowCounter + ", ");
                                             cells[i] = row[i] + ", " + GetColumnName(i) + ":" + rowCounter;
                                         }
                                     }
-
-                                    Console.WriteLine(" ");
                                 }
                             }
                         }
                     }
                 }
+                return cells;
             }
             else
             {
-                Console.WriteLine("No data found.");
+                return null;
             }
-            Console.Read();
-            return cells;
-            
-
         }
 
-
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         static string GetColumnName(int index)
         {
             const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
