@@ -35,6 +35,67 @@
           "lib/AForge.Video.DirectShow.dll": {}
         }
       },
+      "Google.Apis/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.49.0",
+          "Google.Apis.Core": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
+      "Google.Apis.Sheets.v4/1.49.0.2091": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.49.0",
+          "Google.Apis.Auth": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Sheets.v4.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Sheets.v4.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "ZXing.Net/0.16.6": {
         "type": "package",
         "compile": {
@@ -42,6 +103,19 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/zxing.dll": {}
+        }
+      },
+      "GoogleSheetHelper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Google.Apis.Sheets.v4": "1.49.0.2091"
+        },
+        "compile": {
+          "bin/placeholder/GoogleSheetHelper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GoogleSheetHelper.dll": {}
         }
       }
     }
@@ -84,6 +158,134 @@
         "aforge.video.directshow.nuspec",
         "lib/AForge.Video.DirectShow.dll",
         "lib/AForge.Video.DirectShow.xml"
+      ]
+    },
+    "Google.Apis/1.49.0": {
+      "sha512": "fmXQQTxZFOBlnvokvdQMzq0Lt+g2QzpZ4H6U8lMMFHgAR8ZqxQnPN5yHDpoHf7a++hJHb5W3pALxauGsq+afKQ==",
+      "type": "package",
+      "path": "google.apis/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.1.49.0.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Auth/1.49.0": {
+      "sha512": "3V9ohvixQtjaEvk7T9Ac7E/KvwEPa7eL4aMNreJDI0CEPzCdQdk2zCvaJPRrNIjhe+UuBeOeom1oAOMFB74JHg==",
+      "type": "package",
+      "path": "google.apis.auth/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.auth.1.49.0.nupkg.sha512",
+        "google.apis.auth.nuspec",
+        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net45/Google.Apis.Auth.dll",
+        "lib/net45/Google.Apis.Auth.pdb",
+        "lib/net45/Google.Apis.Auth.xml",
+        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.pdb",
+        "lib/netstandard1.3/Google.Apis.Auth.xml",
+        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.pdb",
+        "lib/netstandard2.0/Google.Apis.Auth.xml"
+      ]
+    },
+    "Google.Apis.Core/1.49.0": {
+      "sha512": "9DgGdtyzgrCfHWwc/HiDXDbykNMeKQozbEHYEUEcezRuH+YR3fvq7YGVBDmUM8g6qEL3kDk6h5EU4h0IJwue1w==",
+      "type": "package",
+      "path": "google.apis.core/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.core.1.49.0.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
+    "Google.Apis.Sheets.v4/1.49.0.2091": {
+      "sha512": "uZik5au40JBCiecIidDgOwcaZgZUg1v4+WIuXzx3lCQlqI6IqOgrzUb5YAwM+N8WJej5gye5whRD2T++oFFm2g==",
+      "type": "package",
+      "path": "google.apis.sheets.v4/1.49.0.2091",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "google.apis.sheets.v4.1.49.0.2091.nupkg.sha512",
+        "google.apis.sheets.v4.nuspec",
+        "lib/net40/Google.Apis.Sheets.v4.dll",
+        "lib/net40/Google.Apis.Sheets.v4.pdb",
+        "lib/net40/Google.Apis.Sheets.v4.xml",
+        "lib/net45/Google.Apis.Sheets.v4.dll",
+        "lib/net45/Google.Apis.Sheets.v4.pdb",
+        "lib/net45/Google.Apis.Sheets.v4.xml",
+        "lib/netstandard1.0/Google.Apis.Sheets.v4.dll",
+        "lib/netstandard1.0/Google.Apis.Sheets.v4.pdb",
+        "lib/netstandard1.0/Google.Apis.Sheets.v4.xml",
+        "lib/netstandard1.3/Google.Apis.Sheets.v4.dll",
+        "lib/netstandard1.3/Google.Apis.Sheets.v4.pdb",
+        "lib/netstandard1.3/Google.Apis.Sheets.v4.xml",
+        "lib/netstandard2.0/Google.Apis.Sheets.v4.dll",
+        "lib/netstandard2.0/Google.Apis.Sheets.v4.pdb",
+        "lib/netstandard2.0/Google.Apis.Sheets.v4.xml"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "ZXing.Net/0.16.6": {
@@ -161,6 +363,11 @@
         "zxing.net.0.16.6.nupkg.sha512",
         "zxing.net.nuspec"
       ]
+    },
+    "GoogleSheetHelper/1.0.0": {
+      "type": "project",
+      "path": "../GoogleSheetHelper/GoogleSheetHelper.csproj",
+      "msbuildProject": "../GoogleSheetHelper/GoogleSheetHelper.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -168,29 +375,25 @@
       "AForge >= 2.2.5",
       "AForge.Video >= 2.2.5",
       "AForge.Video.DirectShow >= 2.2.5",
+      "GoogleSheetHelper >= 1.0.0",
       "ZXing.Net >= 0.16.6"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gamep\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Chase Mieras\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
+      "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
       "projectName": "SafetyInspectionApp",
-      "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
-      "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\SafetyInspectionApp\\obj\\",
+      "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
+      "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -201,7 +404,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj": {
+              "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -248,7 +455,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   },

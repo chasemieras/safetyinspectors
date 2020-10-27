@@ -201,25 +201,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gamep\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Chase Mieras\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj",
+      "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj",
       "projectName": "GoogleSheetHelper",
-      "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj",
-      "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectors\\GoogleSheetHelper\\obj\\",
+      "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj",
+      "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\GoogleSheetHelper\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -262,7 +257,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -16,6 +16,7 @@ namespace SafetyInspectionApp
     {
 
         FormHelper formHelper = new FormHelper();
+        GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper(); 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
 
@@ -69,8 +70,18 @@ namespace SafetyInspectionApp
 
         private void StarterForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (videoCaptureDevice.IsRunning)
+            if (videoCaptureDevice.IsRunning) 
+            {
                 videoCaptureDevice.SignalToStop();
+            }
+
+            List<IList<Object>> recordsToSend = new List<IList<Object>>();
+            IList<Object> objectsToSend = new List<Object>();
+            objectsToSend.Add(nameTextBox.Text);
+            recordsToSend.Add(objectsToSend);
+
+            sheetHelper.WriteToSheet(recordsToSend);
+
         }
     }
 }

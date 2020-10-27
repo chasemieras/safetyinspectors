@@ -38,8 +38,8 @@
             this.PodiumRadioButton = new System.Windows.Forms.RadioButton();
             this.SetpLadderRadioButton = new System.Windows.Forms.RadioButton();
             this.LadderInfo = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ladderNumTextBox = new System.Windows.Forms.TextBox();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.LadderInspectGroup.SuspendLayout();
@@ -158,14 +158,13 @@
             this.SetpLadderRadioButton.TabStop = true;
             this.SetpLadderRadioButton.Text = "Step Ladder";
             this.SetpLadderRadioButton.UseVisualStyleBackColor = true;
-            
             // 
             // LadderInfo
             // 
             this.LadderInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LadderInfo.Controls.Add(this.textBox2);
-            this.LadderInfo.Controls.Add(this.textBox1);
+            this.LadderInfo.Controls.Add(this.ladderNumTextBox);
+            this.LadderInfo.Controls.Add(this.locationTextBox);
             this.LadderInfo.Controls.Add(this.label2);
             this.LadderInfo.Controls.Add(this.label1);
             this.LadderInfo.Location = new System.Drawing.Point(30, 22);
@@ -175,21 +174,21 @@
             this.LadderInfo.TabStop = false;
             this.LadderInfo.Text = "Basic Ladder Info";
             // 
-            // textBox2
+            // ladderNumTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(105, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Ladder#";
-            this.textBox2.Size = new System.Drawing.Size(52, 23);
-            this.textBox2.TabIndex = 0;
+            this.ladderNumTextBox.Location = new System.Drawing.Point(105, 27);
+            this.ladderNumTextBox.Name = "ladderNumTextBox";
+            this.ladderNumTextBox.PlaceholderText = "Ladder#";
+            this.ladderNumTextBox.Size = new System.Drawing.Size(52, 23);
+            this.ladderNumTextBox.TabIndex = 0;
             // 
-            // textBox1
+            // locationTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Location";
-            this.textBox1.Size = new System.Drawing.Size(89, 23);
-            this.textBox1.TabIndex = 0;
+            this.locationTextBox.Location = new System.Drawing.Point(68, 55);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.PlaceholderText = "Location";
+            this.locationTextBox.Size = new System.Drawing.Size(89, 23);
+            this.locationTextBox.TabIndex = 0;
             // 
             // label2
             // 
@@ -233,8 +232,8 @@
 
         private System.Windows.Forms.GroupBox LadderInspectGroup;
         private System.Windows.Forms.GroupBox LadderInfo;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ladderNumTextBox;
+        private System.Windows.Forms.TextBox locationTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox LadderType;

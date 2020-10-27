@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.IntroLabel = new System.Windows.Forms.Label();
+            this.employeeNameLabel = new System.Windows.Forms.Label();
             this.FormSelectGroup = new System.Windows.Forms.GroupBox();
             this.startCamera = new System.Windows.Forms.Button();
             this.cameraDisplay = new System.Windows.Forms.PictureBox();
@@ -42,31 +42,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(348, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 23);
-            this.textBox1.TabIndex = 0;
+            this.nameTextBox.Location = new System.Drawing.Point(348, 57);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(149, 23);
+            this.nameTextBox.TabIndex = 0;
             // 
-            // label1
+            // IntroLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(228, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 45);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome to the Safety Inspection Form. Please input your name, \r\nand scan the QR " +
+            this.IntroLabel.AutoSize = true;
+            this.IntroLabel.Location = new System.Drawing.Point(228, 9);
+            this.IntroLabel.Name = "IntroLabel";
+            this.IntroLabel.Size = new System.Drawing.Size(351, 45);
+            this.IntroLabel.TabIndex = 1;
+            this.IntroLabel.Text = "Welcome to the Safety Inspection Form. Please input your name, \r\nand scan the QR " +
     "code for the form.\r\n\r\n";
             // 
-            // label2
+            // employeeNameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(245, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Employee Name:";
+            this.employeeNameLabel.AutoSize = true;
+            this.employeeNameLabel.Location = new System.Drawing.Point(245, 60);
+            this.employeeNameLabel.Name = "employeeNameLabel";
+            this.employeeNameLabel.Size = new System.Drawing.Size(97, 15);
+            this.employeeNameLabel.TabIndex = 2;
+            this.employeeNameLabel.Text = "Employee Name:";
             // 
             // FormSelectGroup
             // 
@@ -127,9 +127,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.FormSelectGroup);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.employeeNameLabel);
+            this.Controls.Add(this.IntroLabel);
+            this.Controls.Add(this.nameTextBox);
             this.Name = "StarterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Safety Inspection Form";
@@ -145,9 +145,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label IntroLabel;
+        private System.Windows.Forms.Label employeeNameLabel;
         private System.Windows.Forms.GroupBox FormSelectGroup;
 
         //Camera Code

@@ -13,4 +13,8 @@
     <PackageReference Include="ZXing.Net" Version="0.16.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GoogleSheetHelper\GoogleSheetHelper.csproj" />
+  </ItemGroup>
+
 </Project>

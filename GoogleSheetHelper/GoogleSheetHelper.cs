@@ -16,7 +16,6 @@ namespace GoogleSheetHelper
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/sheets.googleapis.com-dotnet-quickstart.json
         static string[] Scopes = { SheetsService.Scope.Spreadsheets };
-        static string ApplicationName = "ConsoleAppWriteTo";
         static string SheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
 
         /// <summary>
@@ -28,6 +27,9 @@ namespace GoogleSheetHelper
             UpdatGoogleSheet(dataToInsert, SheetId, "A1:F24", AuthorizeAccess());
         }
 
+        public static void Main()
+        {
+        }
 
         /// <summary>
         /// Authorizes our request to access Google's API
@@ -54,7 +56,6 @@ namespace GoogleSheetHelper
             var service = new SheetsService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
             });
             return service;
         }
