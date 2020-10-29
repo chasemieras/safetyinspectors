@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -11,6 +12,7 @@ namespace SafetyInspectionApp
     public class FormHelper
     {
         int ladderLocationAddition = 75;
+        GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper();
 
         /// <summary>
         /// Sets up the next form that the program wants to pull up.
@@ -37,6 +39,54 @@ namespace SafetyInspectionApp
 
             previousForm.Visible = false;
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="panel"></param>
+        public void sendInfoToSheet(Panel panel)
+        {
+
+            List<IList<Object>> recordsToSend = new List<IList<Object>>();
+            IList<Object> objectsToSend = new List<Object>();
+
+            var sectionGroups = FindByPattern<GroupBox>(@"\S*Group\b", panel);
+
+            foreach (GroupBox gb in sectionGroups) 
+            {
+
+                foreach (RadioButton rb in gb.Controls.OfType<RadioButton>())
+                {
+                    if (rb.Checked) 
+                    {
+                        objectsToSend.Add(rb.Text);
+                    }
+                }
+
+                foreach (TextBox tb in gb.Controls.OfType<TextBox>())
+                {
+                    objectsToSend.Add(tb.Text);
+                }
+            }
+
+            recordsToSend.Add(objectsToSend);
+            sheetHelper.WriteToSheet(recordsToSend);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="TControlType"></typeparam>
+        /// <param name="regexPattern"></param>
+        /// <param name="form"></param>
+        /// <returns></returns>
+        public List<TControlType> FindByPattern<TControlType>(string regexPattern, Panel panel)
+            where TControlType : Control
+        {
+            return panel.Controls.OfType<TControlType>()
+                           .Where(control => Regex.IsMatch(control.Name, regexPattern))
+                           .ToList();
         }
 
         /// <summary>
@@ -89,7 +139,7 @@ namespace SafetyInspectionApp
                 sectionGroup.Controls.Add(noButton);
                 sectionGroup.Controls.Add(naButton);
                 sectionGroup.Location = new System.Drawing.Point(locationX, locationY + ladderLocationAddition * i);
-                sectionGroup.Name = (string)ladderParts[i] + "Section";
+                sectionGroup.Name = (string)ladderParts[i] + "Group";
                 sectionGroup.Size = new System.Drawing.Size(300, 80);
 
                 // 

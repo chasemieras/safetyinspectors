@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using AForge;
@@ -60,6 +61,17 @@ namespace SafetyInspectionApp
                         Form selectedForm;
                         selectedForm = new LadderFormMain();
                         formHelper.setUpForm(selectedForm, this);
+
+                        List<IList<Object>> recordsToSend = new List<IList<Object>>();
+                        IList<Object> objectsToSend = new List<Object>();
+
+                        foreach (TextBox tb in this.Controls.OfType<TextBox>())
+                        {
+                            objectsToSend.Add(tb.Text);
+                        }
+                        recordsToSend.Add(objectsToSend);
+                        sheetHelper.WriteToSheet(recordsToSend);
+
                     }
                     if (videoCaptureDevice.IsRunning)
                         videoCaptureDevice.SignalToStop();
@@ -74,14 +86,6 @@ namespace SafetyInspectionApp
             {
                 videoCaptureDevice.SignalToStop();
             }
-
-            List<IList<Object>> recordsToSend = new List<IList<Object>>();
-            IList<Object> objectsToSend = new List<Object>();
-            objectsToSend.Add(nameTextBox.Text);
-            recordsToSend.Add(objectsToSend);
-
-            sheetHelper.WriteToSheet(recordsToSend);
-
         }
     }
 }

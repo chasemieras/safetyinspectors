@@ -14,7 +14,6 @@ namespace SafetyInspectionApp
     {
 
         FormHelper formHelper = new FormHelper();
-        GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper();
 
         public LadderFormMain()
         {
@@ -23,24 +22,10 @@ namespace SafetyInspectionApp
 
         private void NextLadderFormButton_Click(object sender, EventArgs e)
         {
-
+            formHelper.sendInfoToSheet(LadInspectGroup);
             Form nextLadderForm;
             nextLadderForm = new LadderForms.ConditionForm();
             formHelper.setUpForm(nextLadderForm, this);
-
-            List<IList<Object>> recordsToSend = new List<IList<Object>>();
-            IList<Object> objectsToSend = new List<Object>();
-            for (int i = 0; i < this.Controls.Count; i++) 
-            {
-                //if (this.Controls[i].OfType<RadioButton>) 
-                //{ 
-                //}
-            }
-            //objectsToSend.Add();
-            //recordsToSend.Add(objectsToSend);
-
-            sheetHelper.WriteToSheet(recordsToSend);
-
         }
     }
 }

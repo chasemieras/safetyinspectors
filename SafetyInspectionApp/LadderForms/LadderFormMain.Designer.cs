@@ -28,125 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LadderInspectGroup = new System.Windows.Forms.GroupBox();
-            this.NextLadderFormButton = new System.Windows.Forms.Button();
-            this.LadderMaterial = new System.Windows.Forms.GroupBox();
-            this.AluminumRadioButton = new System.Windows.Forms.RadioButton();
-            this.FiberglassRadioButton = new System.Windows.Forms.RadioButton();
-            this.LadderType = new System.Windows.Forms.GroupBox();
-            this.ExtensionRadioButton = new System.Windows.Forms.RadioButton();
-            this.PodiumRadioButton = new System.Windows.Forms.RadioButton();
-            this.SetpLadderRadioButton = new System.Windows.Forms.RadioButton();
-            this.LadderInfo = new System.Windows.Forms.GroupBox();
-            this.ladderNumTextBox = new System.Windows.Forms.TextBox();
-            this.locationTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LadderInfoGroup = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.LadderInspectGroup.SuspendLayout();
-            this.LadderMaterial.SuspendLayout();
-            this.LadderType.SuspendLayout();
-            this.LadderInfo.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
+            this.ladderNumTextBox = new System.Windows.Forms.TextBox();
+            this.LadderTypeGroup = new System.Windows.Forms.GroupBox();
+            this.SetpLadderRadioButton = new System.Windows.Forms.RadioButton();
+            this.PodiumRadioButton = new System.Windows.Forms.RadioButton();
+            this.ExtensionRadioButton = new System.Windows.Forms.RadioButton();
+            this.LadderMaterialGroup = new System.Windows.Forms.GroupBox();
+            this.FiberglassRadioButton = new System.Windows.Forms.RadioButton();
+            this.AluminumRadioButton = new System.Windows.Forms.RadioButton();
+            this.NextLadderFormButton = new System.Windows.Forms.Button();
+            this.LadInspectGroup = new System.Windows.Forms.Panel();
+            this.LadderInfoGroup.SuspendLayout();
+            this.LadderTypeGroup.SuspendLayout();
+            this.LadderMaterialGroup.SuspendLayout();
+            this.LadInspectGroup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LadderInspectGroup
+            // LadderInfoGroup
             // 
-            this.LadderInspectGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.LadderInfoGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LadderInspectGroup.Controls.Add(this.NextLadderFormButton);
-            this.LadderInspectGroup.Controls.Add(this.LadderMaterial);
-            this.LadderInspectGroup.Controls.Add(this.LadderType);
-            this.LadderInspectGroup.Controls.Add(this.LadderInfo);
-            this.LadderInspectGroup.Location = new System.Drawing.Point(123, 12);
-            this.LadderInspectGroup.MaximumSize = new System.Drawing.Size(440, 450);
-            this.LadderInspectGroup.MinimumSize = new System.Drawing.Size(440, 450);
-            this.LadderInspectGroup.Name = "LadderInspectGroup";
-            this.LadderInspectGroup.Size = new System.Drawing.Size(440, 450);
-            this.LadderInspectGroup.TabIndex = 0;
-            this.LadderInspectGroup.TabStop = false;
-            this.LadderInspectGroup.Text = "Ladder Inspection";
+            this.LadderInfoGroup.Controls.Add(this.ladderNumTextBox);
+            this.LadderInfoGroup.Controls.Add(this.locationTextBox);
+            this.LadderInfoGroup.Controls.Add(this.label2);
+            this.LadderInfoGroup.Controls.Add(this.label1);
+            this.LadderInfoGroup.Location = new System.Drawing.Point(16, 13);
+            this.LadderInfoGroup.Name = "LadderInfoGroup";
+            this.LadderInfoGroup.Size = new System.Drawing.Size(383, 100);
+            this.LadderInfoGroup.TabIndex = 2;
+            this.LadderInfoGroup.TabStop = false;
+            this.LadderInfoGroup.Text = "Basic Ladder Info";
             // 
-            // NextLadderFormButton
+            // label1
             // 
-            this.NextLadderFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ladder Number:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Location:";
+            // 
+            // locationTextBox
+            // 
+            this.locationTextBox.Location = new System.Drawing.Point(68, 55);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.PlaceholderText = "Location";
+            this.locationTextBox.Size = new System.Drawing.Size(89, 23);
+            this.locationTextBox.TabIndex = 0;
+            // 
+            // ladderNumTextBox
+            // 
+            this.ladderNumTextBox.Location = new System.Drawing.Point(105, 27);
+            this.ladderNumTextBox.Name = "ladderNumTextBox";
+            this.ladderNumTextBox.PlaceholderText = "Ladder#";
+            this.ladderNumTextBox.Size = new System.Drawing.Size(52, 23);
+            this.ladderNumTextBox.TabIndex = 0;
+            // 
+            // LadderTypeGroup
+            // 
+            this.LadderTypeGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NextLadderFormButton.Location = new System.Drawing.Point(33, 329);
-            this.NextLadderFormButton.Name = "NextLadderFormButton";
-            this.NextLadderFormButton.Size = new System.Drawing.Size(377, 25);
-            this.NextLadderFormButton.TabIndex = 4;
-            this.NextLadderFormButton.Text = "Next";
-            this.NextLadderFormButton.UseVisualStyleBackColor = true;
-            this.NextLadderFormButton.Click += new System.EventHandler(this.NextLadderFormButton_Click);
-            // 
-            // LadderMaterial
-            // 
-            this.LadderMaterial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LadderMaterial.Controls.Add(this.AluminumRadioButton);
-            this.LadderMaterial.Controls.Add(this.FiberglassRadioButton);
-            this.LadderMaterial.Location = new System.Drawing.Point(30, 234);
-            this.LadderMaterial.Name = "LadderMaterial";
-            this.LadderMaterial.Size = new System.Drawing.Size(383, 89);
-            this.LadderMaterial.TabIndex = 3;
-            this.LadderMaterial.TabStop = false;
-            this.LadderMaterial.Text = "Ladder Material";
-            // 
-            // AluminumRadioButton
-            // 
-            this.AluminumRadioButton.AutoSize = true;
-            this.AluminumRadioButton.Location = new System.Drawing.Point(7, 48);
-            this.AluminumRadioButton.Name = "AluminumRadioButton";
-            this.AluminumRadioButton.Size = new System.Drawing.Size(82, 19);
-            this.AluminumRadioButton.TabIndex = 0;
-            this.AluminumRadioButton.TabStop = true;
-            this.AluminumRadioButton.Text = "Aluminum";
-            this.AluminumRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // FiberglassRadioButton
-            // 
-            this.FiberglassRadioButton.AutoSize = true;
-            this.FiberglassRadioButton.Location = new System.Drawing.Point(7, 23);
-            this.FiberglassRadioButton.Name = "FiberglassRadioButton";
-            this.FiberglassRadioButton.Size = new System.Drawing.Size(77, 19);
-            this.FiberglassRadioButton.TabIndex = 0;
-            this.FiberglassRadioButton.TabStop = true;
-            this.FiberglassRadioButton.Text = "Fiberglass";
-            this.FiberglassRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // LadderType
-            // 
-            this.LadderType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LadderType.Controls.Add(this.ExtensionRadioButton);
-            this.LadderType.Controls.Add(this.PodiumRadioButton);
-            this.LadderType.Controls.Add(this.SetpLadderRadioButton);
-            this.LadderType.Location = new System.Drawing.Point(30, 126);
-            this.LadderType.Name = "LadderType";
-            this.LadderType.Size = new System.Drawing.Size(383, 114);
-            this.LadderType.TabIndex = 3;
-            this.LadderType.TabStop = false;
-            this.LadderType.Text = "Ladder Type";
-            // 
-            // ExtensionRadioButton
-            // 
-            this.ExtensionRadioButton.AutoSize = true;
-            this.ExtensionRadioButton.Location = new System.Drawing.Point(7, 73);
-            this.ExtensionRadioButton.Name = "ExtensionRadioButton";
-            this.ExtensionRadioButton.Size = new System.Drawing.Size(76, 19);
-            this.ExtensionRadioButton.TabIndex = 0;
-            this.ExtensionRadioButton.TabStop = true;
-            this.ExtensionRadioButton.Text = "Extension";
-            this.ExtensionRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // PodiumRadioButton
-            // 
-            this.PodiumRadioButton.AutoSize = true;
-            this.PodiumRadioButton.Location = new System.Drawing.Point(7, 48);
-            this.PodiumRadioButton.Name = "PodiumRadioButton";
-            this.PodiumRadioButton.Size = new System.Drawing.Size(67, 19);
-            this.PodiumRadioButton.TabIndex = 0;
-            this.PodiumRadioButton.TabStop = true;
-            this.PodiumRadioButton.Text = "Podium";
-            this.PodiumRadioButton.UseVisualStyleBackColor = true;
+            this.LadderTypeGroup.Controls.Add(this.ExtensionRadioButton);
+            this.LadderTypeGroup.Controls.Add(this.PodiumRadioButton);
+            this.LadderTypeGroup.Controls.Add(this.SetpLadderRadioButton);
+            this.LadderTypeGroup.Location = new System.Drawing.Point(16, 117);
+            this.LadderTypeGroup.Name = "LadderTypeGroup";
+            this.LadderTypeGroup.Size = new System.Drawing.Size(383, 114);
+            this.LadderTypeGroup.TabIndex = 3;
+            this.LadderTypeGroup.TabStop = false;
+            this.LadderTypeGroup.Text = "Ladder Type";
             // 
             // SetpLadderRadioButton
             // 
@@ -159,91 +122,122 @@
             this.SetpLadderRadioButton.Text = "Step Ladder";
             this.SetpLadderRadioButton.UseVisualStyleBackColor = true;
             // 
-            // LadderInfo
+            // PodiumRadioButton
             // 
-            this.LadderInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PodiumRadioButton.AutoSize = true;
+            this.PodiumRadioButton.Location = new System.Drawing.Point(7, 48);
+            this.PodiumRadioButton.Name = "PodiumRadioButton";
+            this.PodiumRadioButton.Size = new System.Drawing.Size(67, 19);
+            this.PodiumRadioButton.TabIndex = 0;
+            this.PodiumRadioButton.TabStop = true;
+            this.PodiumRadioButton.Text = "Podium";
+            this.PodiumRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // ExtensionRadioButton
+            // 
+            this.ExtensionRadioButton.AutoSize = true;
+            this.ExtensionRadioButton.Location = new System.Drawing.Point(7, 73);
+            this.ExtensionRadioButton.Name = "ExtensionRadioButton";
+            this.ExtensionRadioButton.Size = new System.Drawing.Size(76, 19);
+            this.ExtensionRadioButton.TabIndex = 0;
+            this.ExtensionRadioButton.TabStop = true;
+            this.ExtensionRadioButton.Text = "Extension";
+            this.ExtensionRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // LadderMaterialGroup
+            // 
+            this.LadderMaterialGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LadderInfo.Controls.Add(this.ladderNumTextBox);
-            this.LadderInfo.Controls.Add(this.locationTextBox);
-            this.LadderInfo.Controls.Add(this.label2);
-            this.LadderInfo.Controls.Add(this.label1);
-            this.LadderInfo.Location = new System.Drawing.Point(30, 22);
-            this.LadderInfo.Name = "LadderInfo";
-            this.LadderInfo.Size = new System.Drawing.Size(383, 100);
-            this.LadderInfo.TabIndex = 2;
-            this.LadderInfo.TabStop = false;
-            this.LadderInfo.Text = "Basic Ladder Info";
+            this.LadderMaterialGroup.Controls.Add(this.AluminumRadioButton);
+            this.LadderMaterialGroup.Controls.Add(this.FiberglassRadioButton);
+            this.LadderMaterialGroup.Location = new System.Drawing.Point(16, 229);
+            this.LadderMaterialGroup.Name = "LadderMaterialGroup";
+            this.LadderMaterialGroup.Size = new System.Drawing.Size(383, 89);
+            this.LadderMaterialGroup.TabIndex = 3;
+            this.LadderMaterialGroup.TabStop = false;
+            this.LadderMaterialGroup.Text = "Ladder Material";
             // 
-            // ladderNumTextBox
+            // FiberglassRadioButton
             // 
-            this.ladderNumTextBox.Location = new System.Drawing.Point(105, 27);
-            this.ladderNumTextBox.Name = "ladderNumTextBox";
-            this.ladderNumTextBox.PlaceholderText = "Ladder#";
-            this.ladderNumTextBox.Size = new System.Drawing.Size(52, 23);
-            this.ladderNumTextBox.TabIndex = 0;
+            this.FiberglassRadioButton.AutoSize = true;
+            this.FiberglassRadioButton.Location = new System.Drawing.Point(7, 23);
+            this.FiberglassRadioButton.Name = "FiberglassRadioButton";
+            this.FiberglassRadioButton.Size = new System.Drawing.Size(77, 19);
+            this.FiberglassRadioButton.TabIndex = 0;
+            this.FiberglassRadioButton.TabStop = true;
+            this.FiberglassRadioButton.Text = "Fiberglass";
+            this.FiberglassRadioButton.UseVisualStyleBackColor = true;
             // 
-            // locationTextBox
+            // AluminumRadioButton
             // 
-            this.locationTextBox.Location = new System.Drawing.Point(68, 55);
-            this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.PlaceholderText = "Location";
-            this.locationTextBox.Size = new System.Drawing.Size(89, 23);
-            this.locationTextBox.TabIndex = 0;
+            this.AluminumRadioButton.AutoSize = true;
+            this.AluminumRadioButton.Location = new System.Drawing.Point(7, 48);
+            this.AluminumRadioButton.Name = "AluminumRadioButton";
+            this.AluminumRadioButton.Size = new System.Drawing.Size(82, 19);
+            this.AluminumRadioButton.TabIndex = 0;
+            this.AluminumRadioButton.TabStop = true;
+            this.AluminumRadioButton.Text = "Aluminum";
+            this.AluminumRadioButton.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // NextLadderFormButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Location:";
+            this.NextLadderFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NextLadderFormButton.Location = new System.Drawing.Point(19, 324);
+            this.NextLadderFormButton.Name = "NextLadderFormButton";
+            this.NextLadderFormButton.Size = new System.Drawing.Size(377, 25);
+            this.NextLadderFormButton.TabIndex = 4;
+            this.NextLadderFormButton.Text = "Next";
+            this.NextLadderFormButton.UseVisualStyleBackColor = true;
+            this.NextLadderFormButton.Click += new System.EventHandler(this.NextLadderFormButton_Click);
             // 
-            // label1
+            // LadInspectGroup
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ladder Number:";
+            this.LadInspectGroup.Controls.Add(this.LadderInfoGroup);
+            this.LadInspectGroup.Controls.Add(this.NextLadderFormButton);
+            this.LadInspectGroup.Controls.Add(this.LadderTypeGroup);
+            this.LadInspectGroup.Controls.Add(this.LadderMaterialGroup);
+            this.LadInspectGroup.Location = new System.Drawing.Point(127, 12);
+            this.LadInspectGroup.Name = "LadInspectGroup";
+            this.LadInspectGroup.Size = new System.Drawing.Size(433, 410);
+            this.LadInspectGroup.TabIndex = 1;
             // 
             // LadderFormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 476);
-            this.Controls.Add(this.LadderInspectGroup);
+            this.Controls.Add(this.LadInspectGroup);
             this.Name = "LadderFormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Safety Inspection Form";
-            this.LadderInspectGroup.ResumeLayout(false);
-            this.LadderMaterial.ResumeLayout(false);
-            this.LadderMaterial.PerformLayout();
-            this.LadderType.ResumeLayout(false);
-            this.LadderType.PerformLayout();
-            this.LadderInfo.ResumeLayout(false);
-            this.LadderInfo.PerformLayout();
+            this.LadderInfoGroup.ResumeLayout(false);
+            this.LadderInfoGroup.PerformLayout();
+            this.LadderTypeGroup.ResumeLayout(false);
+            this.LadderTypeGroup.PerformLayout();
+            this.LadderMaterialGroup.ResumeLayout(false);
+            this.LadderMaterialGroup.PerformLayout();
+            this.LadInspectGroup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox LadderInspectGroup;
-        private System.Windows.Forms.GroupBox LadderInfo;
+        private System.Windows.Forms.GroupBox LadderInfoGroup;
         private System.Windows.Forms.TextBox ladderNumTextBox;
         private System.Windows.Forms.TextBox locationTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox LadderType;
-        private System.Windows.Forms.GroupBox LadderMaterial;
-        private System.Windows.Forms.RadioButton AluminumRadioButton;
-        private System.Windows.Forms.RadioButton FiberglassRadioButton;
+        private System.Windows.Forms.GroupBox LadderTypeGroup;
         private System.Windows.Forms.RadioButton ExtensionRadioButton;
         private System.Windows.Forms.RadioButton PodiumRadioButton;
         private System.Windows.Forms.RadioButton SetpLadderRadioButton;
+        private System.Windows.Forms.GroupBox LadderMaterialGroup;
+        private System.Windows.Forms.RadioButton AluminumRadioButton;
+        private System.Windows.Forms.RadioButton FiberglassRadioButton;
         private System.Windows.Forms.Button NextLadderFormButton;
+        private System.Windows.Forms.Panel LadInspectGroup;
     }
 }
 

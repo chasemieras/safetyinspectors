@@ -12,6 +12,7 @@ namespace SafetyInspectionApp.LadderForms
     {
        
         FormHelper formHelper = new FormHelper();
+        Panel conditionGroup = new System.Windows.Forms.Panel();
 
         public ConditionForm()
         {
@@ -22,6 +23,7 @@ namespace SafetyInspectionApp.LadderForms
         {
             Form closeForm;
             closeForm = new EndOfForm();
+            formHelper.sendInfoToSheet(conditionGroup);
             formHelper.setUpForm(closeForm, this);
         }
 
@@ -30,15 +32,14 @@ namespace SafetyInspectionApp.LadderForms
             int locationX = 10;
             int locationY = 20;
 
-            Panel conditionGroup = new System.Windows.Forms.Panel();
             conditionGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             conditionGroup.Location = new System.Drawing.Point(locationX, locationY);
             conditionGroup.Name = "conditionSection";
-            conditionGroup.Size = new System.Drawing.Size(mainGroupBox.Width - 20 , mainGroupBox.Height / 2);
+            conditionGroup.Size = new System.Drawing.Size(Group.Width - 20 , Group.Height / 2);
             conditionGroup.AutoScroll = true;
             conditionGroup.BorderStyle = BorderStyle.FixedSingle;
-            mainGroupBox.Controls.Add(conditionGroup);
+            Group.Controls.Add(conditionGroup);
 
             formHelper.createSectionLadderCondition(locationX, locationY, conditionGroup);
         }
