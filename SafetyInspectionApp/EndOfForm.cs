@@ -19,5 +19,10 @@ namespace SafetyInspectionApp
         {
             this.Close();
         }
+
+        private void EndOfForm_FormClosing(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

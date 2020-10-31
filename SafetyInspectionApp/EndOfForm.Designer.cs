@@ -71,6 +71,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "EndOfForm";
             this.Text = "EndOfForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EndOfForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

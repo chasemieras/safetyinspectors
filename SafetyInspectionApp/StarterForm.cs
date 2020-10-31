@@ -17,7 +17,9 @@ namespace SafetyInspectionApp
     {
 
         FormHelper formHelper = new FormHelper();
-        GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper(); 
+        GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper();
+        FormSettings formSettings = new FormSettings();
+
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
 
@@ -28,10 +30,21 @@ namespace SafetyInspectionApp
 
         private void StarterForm_Load(object sender, EventArgs e)
         {
+            //Sets up systemCameraList with the camera options
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filterInfo in filterInfoCollection)
+            foreach (FilterInfo filterInfo in filterInfoCollection) 
+            {
                 systemCameraList.Items.Add(filterInfo.Name);
+            }
             systemCameraList.SelectedIndex = 0;
+
+            //Sets up the dropdown list of options for selecting a form to complete
+            string[] formSelectionItems = formSettings.KEY_WORDS_FOR_FORM_SELECTION;
+            foreach (string possibleForm in formSelectionItems) 
+            {
+                formSelectionList.Items.Add(possibleForm);
+            }
+            formSelectionList.SelectedIndex = -1;
         }
 
         private void startCamera_Click(object sender, EventArgs e)
@@ -82,10 +95,27 @@ namespace SafetyInspectionApp
 
         private void StarterForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (videoCaptureDevice.IsRunning) 
+            if (videoCaptureDevice != null && videoCaptureDevice.IsRunning) 
             {
                 videoCaptureDevice.SignalToStop();
             }
+        }
+
+        private void formSelection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Form selectedForm;
+            string stringToCompare = formSelectionList.SelectedItem.ToString();
+            switch (stringToCompare) 
+            {
+                case "LADDER":
+                    selectedForm = new LadderFormMain();
+                    formHelper.setUpForm(selectedForm, this);
+                    break;
+                default:
+                    formSelectionList.SelectedIndex = -1;
+                    break;
+            }
+            
         }
     }
 }

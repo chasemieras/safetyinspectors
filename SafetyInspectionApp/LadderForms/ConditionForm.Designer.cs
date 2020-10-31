@@ -63,6 +63,7 @@
             this.Load += new System.EventHandler(this.ExtensionLadder_Load);
             this.Group.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConditionForm_FormClosing);
 
         }
 

@@ -33,6 +33,8 @@
             this.IntroLabel = new System.Windows.Forms.Label();
             this.employeeNameLabel = new System.Windows.Forms.Label();
             this.FormSelectGroup = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.formSelectionList = new System.Windows.Forms.ComboBox();
             this.startCamera = new System.Windows.Forms.Button();
             this.cameraDisplay = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,6 +72,8 @@
             // 
             // FormSelectGroup
             // 
+            this.FormSelectGroup.Controls.Add(this.label1);
+            this.FormSelectGroup.Controls.Add(this.formSelectionList);
             this.FormSelectGroup.Controls.Add(this.startCamera);
             this.FormSelectGroup.Controls.Add(this.cameraDisplay);
             this.FormSelectGroup.Controls.Add(this.label3);
@@ -79,7 +83,25 @@
             this.FormSelectGroup.Size = new System.Drawing.Size(343, 331);
             this.FormSelectGroup.TabIndex = 4;
             this.FormSelectGroup.TabStop = false;
-            this.FormSelectGroup.Text = "Form Selection";
+            this.FormSelectGroup.Text = "Scan a QR Code";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 15);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "-or- Select a Form";
+            // 
+            // formSelectionList
+            // 
+            this.formSelectionList.FormattingEnabled = true;
+            this.formSelectionList.Location = new System.Drawing.Point(116, 50);
+            this.formSelectionList.Name = "formSelectionList";
+            this.formSelectionList.Size = new System.Drawing.Size(217, 23);
+            this.formSelectionList.TabIndex = 9;
+            this.formSelectionList.SelectedIndexChanged += new System.EventHandler(this.formSelection_SelectedIndexChanged);
             // 
             // startCamera
             // 
@@ -93,27 +115,27 @@
             // 
             // cameraDisplay
             // 
-            this.cameraDisplay.Location = new System.Drawing.Point(6, 51);
+            this.cameraDisplay.Location = new System.Drawing.Point(0, 79);
             this.cameraDisplay.Name = "cameraDisplay";
-            this.cameraDisplay.Size = new System.Drawing.Size(331, 274);
+            this.cameraDisplay.Size = new System.Drawing.Size(343, 252);
             this.cameraDisplay.TabIndex = 7;
             this.cameraDisplay.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 25);
+            this.label3.Location = new System.Drawing.Point(8, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 15);
+            this.label3.Size = new System.Drawing.Size(55, 30);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Camera";
+            this.label3.Text = "Camera\r\nSelection";
             // 
             // systemCameraList
             // 
             this.systemCameraList.FormattingEnabled = true;
-            this.systemCameraList.Location = new System.Drawing.Point(54, 21);
+            this.systemCameraList.Location = new System.Drawing.Point(67, 21);
             this.systemCameraList.Name = "systemCameraList";
-            this.systemCameraList.Size = new System.Drawing.Size(222, 23);
+            this.systemCameraList.Size = new System.Drawing.Size(209, 23);
             this.systemCameraList.TabIndex = 5;
             // 
             // cameraTicker
@@ -154,8 +176,9 @@
         private System.Windows.Forms.PictureBox cameraDisplay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox systemCameraList;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button startCamera;
         private System.Windows.Forms.Timer cameraTicker;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox formSelectionList;
     }
 }

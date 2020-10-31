@@ -19,6 +19,11 @@ namespace SafetyInspectionApp.LadderForms
             InitializeComponent();
         }
 
+        private void ConditionForm_FormClosing(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
         private void NextButtonExten_Click(object sender, EventArgs e)
         {
             Form closeForm;

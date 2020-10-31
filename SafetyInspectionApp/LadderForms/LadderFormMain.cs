@@ -19,6 +19,10 @@ namespace SafetyInspectionApp
         {
             InitializeComponent();
         }
+        private void LadderFormMain_FormClosing(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
 
         private void NextLadderFormButton_Click(object sender, EventArgs e)
         {
