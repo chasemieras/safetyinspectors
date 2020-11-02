@@ -11,12 +11,14 @@ namespace SafetyInspectionApp
 {
     public class FormHelper
     {
-        int ladderLocationAddition = 75;
         GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper();
 
         /// <summary>
         /// Sets up the next form that the program wants to pull up.
         /// </summary>
+        /// <author>
+        /// Chase Mieras
+        /// </author>
         /// <param name="nextForm"> The next for that will be shown </param>
         /// <param name="previousForm"> The previous form that will be hidden </param>
         public void setUpForm(Form nextForm, Form previousForm) 
@@ -42,9 +44,12 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
-        /// 
+        /// Sends the information from the given panel to the master Google Sheet using the GoogleSheetHelper
         /// </summary>
-        /// <param name="panel"></param>
+        /// <author>
+        /// Chase Mieras
+        /// </author>
+        /// <param name="panel">Panel from the form that you want to send data from its controls </param>
         public void sendInfoToSheet(Panel panel)
         {
 
@@ -75,12 +80,15 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
-        /// 
+        /// Takes the given regex and panel to find all the GroupBoxes in the panel that match the regex.
         /// </summary>
-        /// <typeparam name="TControlType"></typeparam>
-        /// <param name="regexPattern"></param>
-        /// <param name="form"></param>
-        /// <returns></returns>
+        /// <author>
+        /// Chase Mieras
+        /// </author>
+        /// <typeparam name="TControlType">Controls of the Panel</typeparam>
+        /// <param name="regexPattern">Regex that is used to find the control group that you want</param>
+        /// <param name="panel">panel that may contain GroupBoxes</param>
+        /// <returns>Any controls that match the regex passed in</returns>
         public List<TControlType> FindByPattern<TControlType>(string regexPattern, Panel panel)
             where TControlType : Control
         {
@@ -92,6 +100,9 @@ namespace SafetyInspectionApp
         /// <summary>
         /// Sets up the ladder parts by making an array of the parts
         /// </summary>
+        /// <author>
+        /// Chase Mieras
+        /// </author>
         /// <returns>an array list of ladder parts</returns>
         private ArrayList ladderConditionSetUp() {
             ArrayList ladderParts = new ArrayList();
@@ -114,14 +125,18 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
-        /// 
+        /// Creates a yes/no/na grouping for every condition listed in the ladderConditionSetUp() method.
         /// </summary>
-        /// <param name="locationX"></param>
-        /// <param name="locationY"></param>
-        /// <param name="currentForm"></param>
-        public void createSectionLadderCondition(int locationX, int locationY, Panel currentForm)
+        /// <author>
+        /// Chase Mieras
+        /// </author>
+        /// <param name="locationX">starting x postion</param>
+        /// <param name="locationY">starting x postion</param>
+        /// <param name="currentPanel">the Panel that the inputs will be added to</param>
+        public void createSectionLadderCondition(int locationX, int locationY, Panel currentPanel)
         {
             ArrayList ladderParts = ladderConditionSetUp();
+            int ladderLocationAddition = 75;
 
             for (int i = 0; i < ladderParts.Count; i++) 
             {
@@ -208,7 +223,7 @@ namespace SafetyInspectionApp
                 naButton.Text = "N/A";
                 naButton.UseVisualStyleBackColor = true;
 
-                currentForm.Controls.Add(sectionGroup);
+                currentPanel.Controls.Add(sectionGroup);
             }
         }
     }
