@@ -157,6 +157,7 @@
             this.Text = "Safety Inspection Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StarterForm_FormClosing);
             this.Load += new System.EventHandler(this.StarterForm_Load);
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.StarterForm_Validating);
             this.FormSelectGroup.ResumeLayout(false);
             this.FormSelectGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).EndInit();
