@@ -111,6 +111,15 @@ namespace SafetyInspectionApp
                 case "LADDER":
                     selectedForm = new LadderFormMain();
                     formHelper.setUpForm(selectedForm, this);
+                    List<IList<Object>> recordsToSend = new List<IList<Object>>();
+                    IList<Object> objectsToSend = new List<Object>();
+
+                    foreach (TextBox tb in this.Controls.OfType<TextBox>())
+                    {
+                        objectsToSend.Add(tb.Text);
+                    }
+                    recordsToSend.Add(objectsToSend);
+                    sheetHelper.WriteToSheet(recordsToSend);
                     break;
                 default:
                     formSelectionList.SelectedIndex = -1;
