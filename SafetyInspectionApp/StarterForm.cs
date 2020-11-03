@@ -50,6 +50,7 @@ namespace SafetyInspectionApp
         private void startCamera_Click(object sender, EventArgs e)
         {
             videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[systemCameraList.SelectedIndex].MonikerString);
+            PictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
             videoCaptureDevice.Start();
             cameraTicker.Start();
