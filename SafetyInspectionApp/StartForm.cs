@@ -26,10 +26,7 @@ namespace SafetyInspectionApp
 
             FormSettings formSettings = new FormSettings();
 
-            SafetyInspectForm.MinimumSize = new System.Drawing.Size(formSettings.FORM_MIN_WIDTH, formSettings.FORM_HEIGHT);
-            SafetyInspectForm.MaximumSize = new System.Drawing.Size(formSettings.FORM_MAX_WIDTH, formSettings.FORM_HEIGHT);
-
-            //SafetyInspectForm.WindowState = FormWindowState.Maximized;
+            SafetyInspectForm.Size = new System.Drawing.Size(formSettings.FORM_WIDTH, formSettings.FORM_HEIGHT);
 
             Application.Run(SafetyInspectForm);
 

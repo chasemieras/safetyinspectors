@@ -28,12 +28,13 @@ namespace SafetyInspectionApp
 
             FormSettings formSettings = new FormSettings();
 
-            nextForm.MinimumSize = new Size(formSettings.FORM_MIN_WIDTH, formSettings.FORM_HEIGHT);
-            nextForm.MaximumSize = new Size(formSettings.FORM_MAX_WIDTH, formSettings.FORM_HEIGHT);
+            nextForm.MinimizeBox = false;
+            nextForm.MaximizeBox = false;
+
+            nextForm.Size = new System.Drawing.Size(formSettings.FORM_WIDTH, formSettings.FORM_HEIGHT);
 
             nextForm.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             nextForm.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            nextForm.ClientSize = new System.Drawing.Size(800, 450);
             nextForm.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             nextForm.Text = "Safety Inspection Form";
 
@@ -218,7 +219,7 @@ namespace SafetyInspectionApp
                 naButton.Location = new System.Drawing.Point(95, 35);
                 naButton.Name = (string)ladderParts[i] + "NA";
                 naButton.Size = new System.Drawing.Size(94, 19);
-                naButton.TabIndex = 2;
+                naButton.TabIndex = 3;
                 naButton.TabStop = true;
                 naButton.Text = "N/A";
                 naButton.UseVisualStyleBackColor = true;

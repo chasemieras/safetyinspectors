@@ -10,6 +10,9 @@ namespace SafetyInspectionApp
 {
     public partial class EndOfForm : Form
     {
+
+        FormHelper formHelper = new FormHelper();
+
         public EndOfForm()
         {
             InitializeComponent();
@@ -23,6 +26,13 @@ namespace SafetyInspectionApp
         private void EndOfForm_FormClosing(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void continButton_Click(object sender, EventArgs e)
+        {
+            Form selectedForm;
+            selectedForm = new StarterForm();
+            formHelper.setUpForm(selectedForm, this);
         }
     }
 }

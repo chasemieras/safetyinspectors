@@ -45,11 +45,24 @@ namespace SafetyInspectionApp
                 formSelectionList.Items.Add(possibleForm);
             }
             formSelectionList.SelectedIndex = -1;
+
+            //int controlLocationAddition = 100;
+            //foreach (Control control in this.Controls)
+            //{
+            //    int i = 0;
+            //    control.Location = new System.Drawing.Point(formSettings.FORM_WIDTH / 2 - controlLocationAddition, 0);
+            //    i++;
+            //}
         }
 
         private void startCamera_Click(object sender, EventArgs e)
         {
             videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[systemCameraList.SelectedIndex].MonikerString);
+            if (videoCaptureDevice.IsRunning) 
+            {
+                videoCaptureDevice.Stop();
+                cameraTicker.Stop();
+            }
             cameraDisplay.SizeMode = PictureBoxSizeMode.Zoom;
             videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
             videoCaptureDevice.Start();
@@ -100,6 +113,9 @@ namespace SafetyInspectionApp
             {
                 videoCaptureDevice.SignalToStop();
             }
+
+            System.Windows.Forms.Application.Exit();
+
         }
 
         private void formSelection_SelectedIndexChanged(object sender, EventArgs e)

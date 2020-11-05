@@ -31,21 +31,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.continButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 19);
+            this.label1.Location = new System.Drawing.Point(5, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 15);
+            this.label1.Size = new System.Drawing.Size(237, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Form completed";
+            this.label1.Text = "Form completed. Do you want to continue?";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(62, 37);
+            this.button1.Location = new System.Drawing.Point(180, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -55,13 +56,24 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.continButton);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(306, 161);
+            this.groupBox1.Location = new System.Drawing.Point(276, 161);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(261, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // continButton
+            // 
+            this.continButton.Location = new System.Drawing.Point(7, 27);
+            this.continButton.Name = "continButton";
+            this.continButton.Size = new System.Drawing.Size(75, 23);
+            this.continButton.TabIndex = 2;
+            this.continButton.Text = "Continue";
+            this.continButton.UseVisualStyleBackColor = true;
+            this.continButton.Click += new System.EventHandler(this.continButton_Click);
             // 
             // EndOfForm
             // 
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button continButton;
     }
 }
