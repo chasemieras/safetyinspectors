@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using AForge;
@@ -65,6 +66,7 @@ namespace SafetyInspectionApp
         private void btnStart_Click_1(object sender, EventArgs e)
         {
             videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cboCamera.SelectedIndex].MonikerString);
+            PictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
             videoCaptureDevice.Start();
             timer1.Start();
