@@ -26,7 +26,7 @@ namespace SafetyInspectionApp
 
         private void NextLadderFormButton_Click(object sender, EventArgs e)
         {
-            formHelper.sendInfoToSheet(LadInspectGroup);
+            formHelper.storeInfoToSendToSheet(LadInspectGroup);
             Form nextLadderForm;
             nextLadderForm = new LadderForms.ConditionForm();
             formHelper.setUpForm(nextLadderForm, this);

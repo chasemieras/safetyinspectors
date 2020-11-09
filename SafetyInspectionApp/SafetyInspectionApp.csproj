@@ -10,11 +10,14 @@
     <PackageReference Include="AForge" Version="2.2.5" />
     <PackageReference Include="AForge.Video" Version="2.2.5" />
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.49.0.2111" />
     <PackageReference Include="ZXing.Net" Version="0.16.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoogleSheetHelper\GoogleSheetHelper.csproj" />
+    <None Update="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

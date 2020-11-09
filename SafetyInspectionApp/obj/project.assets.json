@@ -74,7 +74,7 @@
           "lib/netstandard2.0/Google.Apis.Core.dll": {}
         }
       },
-      "Google.Apis.Sheets.v4/1.49.0.2091": {
+      "Google.Apis.Sheets.v4/1.49.0.2111": {
         "type": "package",
         "dependencies": {
           "Google.Apis": "1.49.0",
@@ -103,19 +103,6 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/zxing.dll": {}
-        }
-      },
-      "GoogleSheetHelper/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Google.Apis.Sheets.v4": "1.49.0.2091"
-        },
-        "compile": {
-          "bin/placeholder/GoogleSheetHelper.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GoogleSheetHelper.dll": {}
         }
       }
     }
@@ -230,15 +217,15 @@
         "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
-    "Google.Apis.Sheets.v4/1.49.0.2091": {
-      "sha512": "uZik5au40JBCiecIidDgOwcaZgZUg1v4+WIuXzx3lCQlqI6IqOgrzUb5YAwM+N8WJej5gye5whRD2T++oFFm2g==",
+    "Google.Apis.Sheets.v4/1.49.0.2111": {
+      "sha512": "dJhyQqatT8u1E5/PN0fB80tfc7eKvS25kcQGxpetcYSlrKiNFYOxcGqGqEGDCnrKFviXtuw1YXK65LWwzNdxIQ==",
       "type": "package",
-      "path": "google.apis.sheets.v4/1.49.0.2091",
+      "path": "google.apis.sheets.v4/1.49.0.2111",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
-        "google.apis.sheets.v4.1.49.0.2091.nupkg.sha512",
+        "google.apis.sheets.v4.1.49.0.2111.nupkg.sha512",
         "google.apis.sheets.v4.nuspec",
         "lib/net40/Google.Apis.Sheets.v4.dll",
         "lib/net40/Google.Apis.Sheets.v4.pdb",
@@ -363,11 +350,6 @@
         "zxing.net.0.16.6.nupkg.sha512",
         "zxing.net.nuspec"
       ]
-    },
-    "GoogleSheetHelper/1.0.0": {
-      "type": "project",
-      "path": "../GoogleSheetHelper/GoogleSheetHelper.csproj",
-      "msbuildProject": "../GoogleSheetHelper/GoogleSheetHelper.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -375,7 +357,7 @@
       "AForge >= 2.2.5",
       "AForge.Video >= 2.2.5",
       "AForge.Video.DirectShow >= 2.2.5",
-      "GoogleSheetHelper >= 1.0.0",
+      "Google.Apis.Sheets.v4 >= 1.49.0.2111",
       "ZXing.Net >= 0.16.6"
     ]
   },
@@ -404,11 +386,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {
-            "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj": {
-              "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\GoogleSheetHelper\\GoogleSheetHelper.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -431,6 +409,10 @@
           "AForge.Video.DirectShow": {
             "target": "Package",
             "version": "[2.2.5, )"
+          },
+          "Google.Apis.Sheets.v4": {
+            "target": "Package",
+            "version": "[1.49.0.2111, )"
           },
           "ZXing.Net": {
             "target": "Package",

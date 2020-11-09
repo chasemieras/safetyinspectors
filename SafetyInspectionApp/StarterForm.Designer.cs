@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StarterForm));
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.IntroLabel = new System.Windows.Forms.Label();
             this.employeeNameLabel = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             // 
             // nameTextBox
             // 
+            this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nameTextBox.Location = new System.Drawing.Point(348, 57);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(149, 23);
@@ -53,6 +55,7 @@
             // 
             // IntroLabel
             // 
+            this.IntroLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.IntroLabel.AutoSize = true;
             this.IntroLabel.Location = new System.Drawing.Point(228, 9);
             this.IntroLabel.Name = "IntroLabel";
@@ -63,6 +66,7 @@
             // 
             // employeeNameLabel
             // 
+            this.employeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.employeeNameLabel.AutoSize = true;
             this.employeeNameLabel.Location = new System.Drawing.Point(245, 60);
             this.employeeNameLabel.Name = "employeeNameLabel";
@@ -72,6 +76,7 @@
             // 
             // FormSelectGroup
             // 
+            this.FormSelectGroup.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FormSelectGroup.Controls.Add(this.label1);
             this.FormSelectGroup.Controls.Add(this.formSelectionList);
             this.FormSelectGroup.Controls.Add(this.startCamera);
@@ -152,6 +157,7 @@
             this.Controls.Add(this.employeeNameLabel);
             this.Controls.Add(this.IntroLabel);
             this.Controls.Add(this.nameTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StarterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Safety Inspection Form";

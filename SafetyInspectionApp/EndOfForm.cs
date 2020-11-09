@@ -20,6 +20,7 @@ namespace SafetyInspectionApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            formHelper.submitDataToGooleSheet();
             this.Close();
         }
 
@@ -32,6 +33,7 @@ namespace SafetyInspectionApp
         {
             Form selectedForm;
             selectedForm = new StarterForm();
+            formHelper.submitDataToGooleSheet();
             formHelper.setUpForm(selectedForm, this);
         }
     }

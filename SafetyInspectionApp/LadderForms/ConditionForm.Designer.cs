@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConditionForm));
             this.NextButtonExten = new System.Windows.Forms.Button();
             this.Group = new System.Windows.Forms.Panel();
             this.Group.SuspendLayout();
@@ -45,6 +46,7 @@
             // 
             // Group
             // 
+            this.Group.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Group.Controls.Add(this.NextButtonExten);
             this.Group.Location = new System.Drawing.Point(102, 12);
             this.Group.Name = "Group";
@@ -57,13 +59,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 477);
             this.Controls.Add(this.Group);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConditionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExtensionLadder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConditionForm_FormClosing);
             this.Load += new System.EventHandler(this.ExtensionLadder_Load);
             this.Group.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConditionForm_FormClosing);
 
         }
 

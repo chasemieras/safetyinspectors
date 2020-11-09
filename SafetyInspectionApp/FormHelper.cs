@@ -11,22 +11,23 @@ namespace SafetyInspectionApp
 {
     public class FormHelper
     {
-        GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper();
+
+        private FormSettings formSettings = new FormSettings();
+        private GoogleSheetHelper sheetHelper = new GoogleSheetHelper();
+
+        private List<IList<Object>> dataToSendFromControlList = new List<IList<Object>>();
+        private IList<Object> controlsDataList = new List<Object>();
 
         /// <summary>
+        /// <para>Author: Chase Mieras</para>
         /// Sets up the next form that the program wants to pull up.
         /// </summary>
-        /// <author>
-        /// Chase Mieras
-        /// </author>
         /// <param name="nextForm"> The next for that will be shown </param>
         /// <param name="previousForm"> The previous form that will be hidden </param>
         public void setUpForm(Form nextForm, Form previousForm) 
         {
             nextForm.MinimizeBox = false;
             nextForm.MaximizeBox = false;
-
-            FormSettings formSettings = new FormSettings();
 
             nextForm.MinimizeBox = false;
             nextForm.MaximizeBox = false;
@@ -45,52 +46,81 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
-        /// Sends the information from the given panel to the master Google Sheet using the GoogleSheetHelper
+        /// <para>Author: Chase Mieras</para>
+        /// Stores the data that will be sent to the Google Sheet
         /// </summary>
-        /// <author>
-        /// Chase Mieras
-        /// </author>
         /// <param name="panel">Panel from the form that you want to send data from its controls </param>
-        public void sendInfoToSheet(Panel panel)
-        {
+        public void storeInfoToSendToSheet(Panel panel)
+        { 
 
-            List<IList<Object>> recordsToSend = new List<IList<Object>>();
-            IList<Object> objectsToSend = new List<Object>();
-
-            var sectionGroups = FindByPattern<GroupBox>(@"\S*Group\b", panel);
+            var sectionGroups = findByPattern<GroupBox>(@"\S*Group\b", panel);
+            Regex rxNA = new Regex(@"\S*NA\b");
 
             foreach (GroupBox gb in sectionGroups) 
             {
 
                 foreach (RadioButton rb in gb.Controls.OfType<RadioButton>())
                 {
-                    if (rb.Checked) 
+                    if (rb.Checked)
                     {
-                        objectsToSend.Add(rb.Text);
+                        controlsDataList.Add(true);
+                    }
+                    else
+                    {
+                        controlsDataList.Add(false);
                     }
                 }
 
                 foreach (TextBox tb in gb.Controls.OfType<TextBox>())
                 {
-                    objectsToSend.Add(tb.Text);
+                    controlsDataList.Add(tb.Text);
                 }
             }
 
-            recordsToSend.Add(objectsToSend);
-            sheetHelper.WriteToSheet(recordsToSend);
+            dataToSendFromControlList.Add(controlsDataList);
+            submitDataToGooleSheet();
         }
 
         /// <summary>
+        /// <para>Author: Chase Mieras</para>
+        /// Submits the stored data in dataToSendFromControlList to the master Google Sheet
+        /// </summary>
+        public void submitDataToGooleSheet() 
+        {
+            sheetHelper.WriteToSheet(dataToSendFromControlList);
+        }
+
+        /// <summary>
+        /// <para>Author: Chase Mieras</para>
+        /// Specifc method for the starter form to use when submitting data for the Goole Sheet
+        /// </summary>
+        /// <param name="starterForm">The starter form</param>
+        public void starterNextForm(StarterForm starterForm)
+        {
+            Form selectedForm;
+            selectedForm = new LadderFormMain();
+            setUpForm(selectedForm, starterForm);
+
+            foreach (TextBox tb in starterForm.Controls.OfType<TextBox>())
+            {
+                controlsDataList.Add(tb.Text);
+            }
+
+            controlsDataList.Add(DateTime.Now);
+
+            dataToSendFromControlList.Add(controlsDataList);
+            submitDataToGooleSheet();
+        }
+
+        /// <summary>
+        /// <para>Author: Chase Mieras</para>
         /// Takes the given regex and panel to find all the GroupBoxes in the panel that match the regex.
         /// </summary>
-        /// <author>
-        /// Chase Mieras
-        /// </author>
         /// <typeparam name="TControlType">Controls of the Panel</typeparam>
         /// <param name="regexPattern">Regex that is used to find the control group that you want</param>
         /// <param name="panel">panel that may contain GroupBoxes</param>
         /// <returns>Any controls that match the regex passed in</returns>
-        public List<TControlType> FindByPattern<TControlType>(string regexPattern, Panel panel)
+        public List<TControlType> findByPattern<TControlType>(string regexPattern, Panel panel)
             where TControlType : Control
         {
             return panel.Controls.OfType<TControlType>()
@@ -99,11 +129,9 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
+        /// <para>Author: Chase Mieras</para>
         /// Sets up the ladder parts by making an array of the parts
         /// </summary>
-        /// <author>
-        /// Chase Mieras
-        /// </author>
         /// <returns>an array list of ladder parts</returns>
         private ArrayList ladderConditionSetUp() {
             ArrayList ladderParts = new ArrayList();
@@ -127,10 +155,8 @@ namespace SafetyInspectionApp
 
         /// <summary>
         /// Creates a yes/no/na grouping for every condition listed in the ladderConditionSetUp() method.
+        /// Author: Chase Mieras
         /// </summary>
-        /// <author>
-        /// Chase Mieras
-        /// </author>
         /// <param name="locationX">starting x postion</param>
         /// <param name="locationY">starting x postion</param>
         /// <param name="currentPanel">the Panel that the inputs will be added to</param>

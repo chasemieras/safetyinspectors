@@ -28,7 +28,7 @@ namespace SafetyInspectionApp.LadderForms
         {
             Form closeForm;
             closeForm = new EndOfForm();
-            formHelper.sendInfoToSheet(conditionGroup);
+            formHelper.storeInfoToSendToSheet(conditionGroup);
             formHelper.setUpForm(closeForm, this);
         }
 

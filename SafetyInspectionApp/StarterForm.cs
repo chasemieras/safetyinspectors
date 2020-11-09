@@ -17,7 +17,7 @@ namespace SafetyInspectionApp
     {
 
         FormHelper formHelper = new FormHelper();
-        GoogleSheetHelper.GoogleSheetHelper sheetHelper = new GoogleSheetHelper.GoogleSheetHelper();
+        GoogleSheetHelper sheetHelper = new GoogleSheetHelper();
         FormSettings formSettings = new FormSettings();
 
         FilterInfoCollection filterInfoCollection;
@@ -45,14 +45,6 @@ namespace SafetyInspectionApp
                 formSelectionList.Items.Add(possibleForm);
             }
             formSelectionList.SelectedIndex = -1;
-
-            //int controlLocationAddition = 100;
-            //foreach (Control control in this.Controls)
-            //{
-            //    int i = 0;
-            //    control.Location = new System.Drawing.Point(formSettings.FORM_WIDTH / 2 - controlLocationAddition, 0);
-            //    i++;
-            //}
         }
 
         private void startCamera_Click(object sender, EventArgs e)
@@ -68,6 +60,7 @@ namespace SafetyInspectionApp
             videoCaptureDevice.Start();
             cameraTicker.Start();
         }
+
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             cameraDisplay.Image = (Bitmap)eventArgs.Frame.Clone();
@@ -81,28 +74,25 @@ namespace SafetyInspectionApp
                 Result result = barcodeReader.Decode((Bitmap)cameraDisplay.Image);
                 if (result != null)
                 {
-                    if (result.ToString().Equals("1"))
+                    foreach (string form in formSettings.KEY_WORDS_FOR_FORM_SELECTION) 
                     {
-                        if (videoCaptureDevice.IsRunning)
-                            videoCaptureDevice.SignalToStop();
-                        Form selectedForm;
-                        selectedForm = new LadderFormMain();
-                        formHelper.setUpForm(selectedForm, this);
-
-                        List<IList<Object>> recordsToSend = new List<IList<Object>>();
-                        IList<Object> objectsToSend = new List<Object>();
-
-                        foreach (TextBox tb in this.Controls.OfType<TextBox>())
+                        if (result.ToString().Equals("form"))
                         {
-                            objectsToSend.Add(tb.Text);
-                        }
-                        recordsToSend.Add(objectsToSend);
-                        sheetHelper.WriteToSheet(recordsToSend);
+                            if (videoCaptureDevice.IsRunning)
+                            {
+                                videoCaptureDevice.SignalToStop();
+                            }
+                            //TO DO, ADD QUESTION SELECTION
+                            formHelper.starterNextForm(this);
 
-                    }
+                        }
+                        else
                     if (videoCaptureDevice.IsRunning)
-                        videoCaptureDevice.SignalToStop();
-                    cameraTicker.Stop();
+                        {
+                            videoCaptureDevice.SignalToStop();
+                        }
+                        cameraTicker.Stop();
+                    }
                 }
             }
         }
@@ -120,28 +110,19 @@ namespace SafetyInspectionApp
 
         private void formSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Form selectedForm;
             string stringToCompare = formSelectionList.SelectedItem.ToString();
-            switch (stringToCompare) 
+            foreach (string form in formSettings.KEY_WORDS_FOR_FORM_SELECTION) 
             {
-                case "LADDER":
-                    selectedForm = new LadderFormMain();
-                    formHelper.setUpForm(selectedForm, this);
-                    List<IList<Object>> recordsToSend = new List<IList<Object>>();
-                    IList<Object> objectsToSend = new List<Object>();
-
-                    foreach (TextBox tb in this.Controls.OfType<TextBox>())
-                    {
-                        objectsToSend.Add(tb.Text);
-                    }
-                    recordsToSend.Add(objectsToSend);
-                    sheetHelper.WriteToSheet(recordsToSend);
-                    break;
-                default:
+                if (stringToCompare.Equals(form))
+                {
+                    //TO DO, ADD QUESTION SELECTION
+                    formHelper.starterNextForm(this);
+                }
+                else 
+                {
                     formSelectionList.SelectedIndex = -1;
-                    break;
+                }
             }
-            
         }
     }
 }

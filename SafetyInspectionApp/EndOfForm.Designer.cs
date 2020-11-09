@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EndOfForm));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,6 +57,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.continButton);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
@@ -81,6 +83,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EndOfForm";
             this.Text = "EndOfForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EndOfForm_FormClosing);

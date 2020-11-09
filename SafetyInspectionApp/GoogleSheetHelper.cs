@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 
-namespace GoogleSheetHelper
+namespace SafetyInspectionApp
 {
     public class GoogleSheetHelper
     {
@@ -25,10 +25,6 @@ namespace GoogleSheetHelper
         public void WriteToSheet(List<IList<Object>> dataToInsert)
         {
             UpdatGoogleSheet(dataToInsert, SheetId, "A1:F24", AuthorizeAccess());
-        }
-
-        public static void Main()
-        {
         }
 
         /// <summary>
