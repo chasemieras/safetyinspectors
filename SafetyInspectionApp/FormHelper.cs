@@ -12,11 +12,8 @@ namespace SafetyInspectionApp
     public class FormHelper
     {
 
-        private FormSettings formSettings = new FormSettings();
+        private FormSettings formSettings = new FormSettings(); 
         private GoogleSheetHelper sheetHelper = new GoogleSheetHelper();
-
-        private List<IList<Object>> dataToSendFromControlList = new List<IList<Object>>();
-        private IList<Object> controlsDataList = new List<Object>();
 
         /// <summary>
         /// <para>Author: Chase Mieras</para>
@@ -50,11 +47,13 @@ namespace SafetyInspectionApp
         /// Stores the data that will be sent to the Google Sheet
         /// </summary>
         /// <param name="panel">Panel from the form that you want to send data from its controls </param>
-        public void storeInfoToSendToSheet(Panel panel)
-        { 
+        /// <param name="dataStorage"></param>
+        public void storeInfoToSendToSheet(Panel panel, FormSettings dataStorage)
+        {
 
-            var sectionGroups = findByPattern<GroupBox>(@"\S*Group\b", panel);
-            Regex rxNA = new Regex(@"\S*NA\b");
+            IList<Object> controlsDataList = dataStorage.controlsDataList;
+
+        var sectionGroups = findByPattern<GroupBox>(@"\S*Group\b", panel);
 
             foreach (GroupBox gb in sectionGroups) 
             {
@@ -63,11 +62,11 @@ namespace SafetyInspectionApp
                 {
                     if (rb.Checked)
                     {
-                        controlsDataList.Add(true);
+                        controlsDataList.Add(rb.Name + ": " + true);
                     }
                     else
                     {
-                        controlsDataList.Add(false);
+                        controlsDataList.Add(rb.Name + ": " + false);
                     }
                 }
 
@@ -76,30 +75,34 @@ namespace SafetyInspectionApp
                     controlsDataList.Add(tb.Text);
                 }
             }
-
-            dataToSendFromControlList.Add(controlsDataList);
-            submitDataToGooleSheet();
         }
 
         /// <summary>
         /// <para>Author: Chase Mieras</para>
         /// Submits the stored data in dataToSendFromControlList to the master Google Sheet
         /// </summary>
-        public void submitDataToGooleSheet() 
+        /// <param name="dataStorage">formSetting that has all the data</param>
+        public void submitDataToGooleSheet(FormSettings dataStorage)
         {
+            List<IList<Object>> dataToSendFromControlList = new List<IList<Object>>();
+            dataToSendFromControlList.Add(dataStorage.controlsDataList);
+
             sheetHelper.WriteToSheet(dataToSendFromControlList);
         }
 
         /// <summary>
         /// <para>Author: Chase Mieras</para>
-        /// Specifc method for the starter form to use when submitting data for the Goole Sheet
+        /// Specifc method for the starter form to use when submitting data for the Google Sheet
         /// </summary>
         /// <param name="starterForm">The starter form</param>
-        public void starterNextForm(StarterForm starterForm)
+        /// <param name="formSettings"></param>
+        public void starterNextForm(StarterForm starterForm, FormSettings formSettings)
         {
             Form selectedForm;
-            selectedForm = new LadderFormMain();
+            selectedForm = new LadderFormMain(formSettings);
             setUpForm(selectedForm, starterForm);
+
+            IList<Object> controlsDataList = formSettings.controlsDataList;
 
             foreach (TextBox tb in starterForm.Controls.OfType<TextBox>())
             {
@@ -107,9 +110,6 @@ namespace SafetyInspectionApp
             }
 
             controlsDataList.Add(DateTime.Now);
-
-            dataToSendFromControlList.Add(controlsDataList);
-            submitDataToGooleSheet();
         }
 
         /// <summary>

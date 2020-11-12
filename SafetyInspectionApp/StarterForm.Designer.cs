@@ -41,8 +41,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.systemCameraList = new System.Windows.Forms.ComboBox();
             this.cameraTicker = new System.Windows.Forms.Timer(this.components);
+            this.validator = new System.Windows.Forms.ErrorProvider(this.components);
             this.FormSelectGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validator)).BeginInit();
             this.SuspendLayout();
             // 
             // nameTextBox
@@ -52,6 +54,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(149, 23);
             this.nameTextBox.TabIndex = 0;
+            this.nameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.nameTextBox_Validating);
             // 
             // IntroLabel
             // 
@@ -148,6 +151,10 @@
             this.cameraTicker.Interval = 1000;
             this.cameraTicker.Tick += new System.EventHandler(this.cameraTicker_Tick);
             // 
+            // validator
+            // 
+            this.validator.ContainerControl = this;
+            // 
             // StarterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -166,6 +173,7 @@
             this.FormSelectGroup.ResumeLayout(false);
             this.FormSelectGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validator)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +194,6 @@
         private System.Windows.Forms.Timer cameraTicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox formSelectionList;
+        private System.Windows.Forms.ErrorProvider validator;
     }
 }

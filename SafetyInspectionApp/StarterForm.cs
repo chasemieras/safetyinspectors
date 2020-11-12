@@ -23,8 +23,9 @@ namespace SafetyInspectionApp
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
 
-        public StarterForm()
+        public StarterForm(FormSettings formSettings)
         {
+            this.formSettings = formSettings;
             InitializeComponent();
         }
 
@@ -83,7 +84,7 @@ namespace SafetyInspectionApp
                                 videoCaptureDevice.SignalToStop();
                             }
                             //TO DO, ADD QUESTION SELECTION
-                            formHelper.starterNextForm(this);
+                            formHelper.starterNextForm(this, formSettings);
 
                         }
                         else
@@ -116,12 +117,27 @@ namespace SafetyInspectionApp
                 if (stringToCompare.Equals(form))
                 {
                     //TO DO, ADD QUESTION SELECTION
-                    formHelper.starterNextForm(this);
+                    formHelper.starterNextForm(this, formSettings);
                 }
                 else 
                 {
                     formSelectionList.SelectedIndex = -1;
                 }
+            }
+        }
+
+        private void nameTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(nameTextBox.Text))
+            {
+                e.Cancel = true;
+                nameTextBox.Focus();
+                validator.SetError(nameTextBox, "Please enter your name");
+            }
+            else 
+            {
+                e.Cancel = false;
+                validator.SetError(nameTextBox, null);
             }
         }
     }

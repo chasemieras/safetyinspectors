@@ -14,10 +14,12 @@ namespace SafetyInspectionApp
     {
 
         FormHelper formHelper = new FormHelper();
+        FormSettings formSettings = new FormSettings();
 
-        public LadderFormMain()
+        public LadderFormMain(FormSettings formSettings)
         {
             InitializeComponent();
+            this.formSettings = formSettings;
         }
         private void LadderFormMain_FormClosing(object sender, EventArgs e)
         {
@@ -26,9 +28,9 @@ namespace SafetyInspectionApp
 
         private void NextLadderFormButton_Click(object sender, EventArgs e)
         {
-            formHelper.storeInfoToSendToSheet(LadInspectGroup);
+            formHelper.storeInfoToSendToSheet(LadInspectGroup, formSettings);
             Form nextLadderForm;
-            nextLadderForm = new LadderForms.ConditionForm();
+            nextLadderForm = new LadderForms.ConditionForm(formSettings);
             formHelper.setUpForm(nextLadderForm, this);
         }
     }

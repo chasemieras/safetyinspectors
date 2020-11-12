@@ -7,6 +7,9 @@ namespace SafetyInspectionApp
 {
     public class FormSettings
     {
+
+        public IList<Object> controlsDataList = new List<Object>();
+
         private static int fORM_HEIGHT = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height;
         private static int fORM_WIDTH = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Width;
 

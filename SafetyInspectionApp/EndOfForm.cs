@@ -12,15 +12,17 @@ namespace SafetyInspectionApp
     {
 
         FormHelper formHelper = new FormHelper();
+        FormSettings formSettings = new FormSettings();
 
-        public EndOfForm()
+        public EndOfForm(FormSettings formSettings)
         {
             InitializeComponent();
+            this.formSettings = formSettings;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            formHelper.submitDataToGooleSheet();
+            formHelper.submitDataToGooleSheet(formSettings);
             this.Close();
         }
 
@@ -32,8 +34,8 @@ namespace SafetyInspectionApp
         private void continButton_Click(object sender, EventArgs e)
         {
             Form selectedForm;
-            selectedForm = new StarterForm();
-            formHelper.submitDataToGooleSheet();
+            selectedForm = new StarterForm(new FormSettings());
+            formHelper.submitDataToGooleSheet(formSettings);
             formHelper.setUpForm(selectedForm, this);
         }
     }

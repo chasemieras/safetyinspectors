@@ -13,10 +13,12 @@ namespace SafetyInspectionApp.LadderForms
        
         FormHelper formHelper = new FormHelper();
         Panel conditionGroup = new System.Windows.Forms.Panel();
+        FormSettings formSettings = new FormSettings();
 
-        public ConditionForm()
+        public ConditionForm(FormSettings formSettings)
         {
             InitializeComponent();
+            this.formSettings = formSettings;
         }
 
         private void ConditionForm_FormClosing(object sender, EventArgs e)
@@ -27,8 +29,8 @@ namespace SafetyInspectionApp.LadderForms
         private void NextButtonExten_Click(object sender, EventArgs e)
         {
             Form closeForm;
-            closeForm = new EndOfForm();
-            formHelper.storeInfoToSendToSheet(conditionGroup);
+            closeForm = new EndOfForm(formSettings);
+            formHelper.storeInfoToSendToSheet(conditionGroup, formSettings);
             formHelper.setUpForm(closeForm, this);
         }
 

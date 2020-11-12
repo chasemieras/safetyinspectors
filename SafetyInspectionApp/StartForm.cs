@@ -18,13 +18,11 @@ namespace SafetyInspectionApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Form SafetyInspectForm = new StarterForm();
-            //TO DO - Make main form to load this
+            FormSettings formSettings = new FormSettings();
+            Form SafetyInspectForm = new StarterForm(formSettings);
 
             SafetyInspectForm.MinimizeBox = false;
             SafetyInspectForm.MaximizeBox = false;
-
-            FormSettings formSettings = new FormSettings();
 
             SafetyInspectForm.Size = new System.Drawing.Size(formSettings.FORM_WIDTH, formSettings.FORM_HEIGHT);
 
