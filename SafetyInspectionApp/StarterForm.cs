@@ -36,7 +36,10 @@ namespace SafetyInspectionApp
             {
                 systemCameraList.Items.Add(filterInfo.Name);
             }
-            systemCameraList.SelectedIndex = 0;
+            if(systemCameraList.Items.Count < 0)
+            {
+                systemCameraList.SelectedIndex = 0;
+            }
 
             //Sets up the dropdown list of options for selecting a form to complete
             string[] formSelectionItems = formSettings.KEY_WORDS_FOR_FORM_SELECTION;
@@ -49,11 +52,19 @@ namespace SafetyInspectionApp
 
         private void startCamera_Click(object sender, EventArgs e)
         {
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[systemCameraList.SelectedIndex].MonikerString);
-            cameraDisplay.SizeMode = PictureBoxSizeMode.Zoom;
-            videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
-            cameraTicker.Start();
+            if (systemCameraList.Items.Count < 0)
+            {
+                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[systemCameraList.SelectedIndex].MonikerString);
+                if (videoCaptureDevice.IsRunning)
+                {
+                    videoCaptureDevice.Stop();
+                    cameraTicker.Stop();
+                }
+                cameraDisplay.SizeMode = PictureBoxSizeMode.Zoom;
+                videoCaptureDevice.NewFrame += CaptureDevice_NewFrame;
+                videoCaptureDevice.Start();
+                cameraTicker.Start();
+            }
         }
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
@@ -99,11 +110,17 @@ namespace SafetyInspectionApp
             if (videoCaptureDevice != null && videoCaptureDevice.IsRunning) 
             {
                 videoCaptureDevice.SignalToStop();
+                cameraTicker.Stop();
             }
         }
 
         private void formSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (videoCaptureDevice != null && videoCaptureDevice.IsRunning)
+            {
+                videoCaptureDevice.SignalToStop();
+                cameraTicker.Stop();
+            }
             Form selectedForm;
             string stringToCompare = formSelectionList.SelectedItem.ToString();
             switch (stringToCompare) 

@@ -80,6 +80,30 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
+        /// Sends the information from the given panel to the master Google Sheet using the GoogleSheetHelper
+        /// </summary>
+        /// <author>
+        /// Chase Mieras
+        /// </author>
+        /// <param name="images">List of Images from the form that you want to send data from its controls </param>
+        public void sendInfoToSheet(List<Image> images)
+        {
+
+            List<IList<Object>> recordsToSend = new List<IList<Object>>();
+            IList<Object> objectsToSend = new List<Object>();
+
+            int index = 0;
+            foreach (Image image in images)
+            {
+                objectsToSend.Add(image);
+                index++;
+            }
+
+            recordsToSend.Add(objectsToSend);
+            sheetHelper.WriteToSheet(recordsToSend);
+        }
+
+        /// <summary>
         /// Takes the given regex and panel to find all the GroupBoxes in the panel that match the regex.
         /// </summary>
         /// <author>
@@ -143,6 +167,7 @@ namespace SafetyInspectionApp
                 RadioButton yesButton = new System.Windows.Forms.RadioButton();
                 RadioButton noButton = new System.Windows.Forms.RadioButton();
                 RadioButton naButton = new System.Windows.Forms.RadioButton();
+                //PictureBox pictureBox = new System.Windows.Forms.PictureBox();
                 Label label = new System.Windows.Forms.Label();
                 GroupBox sectionGroup = new System.Windows.Forms.GroupBox();
 
@@ -153,6 +178,7 @@ namespace SafetyInspectionApp
                 sectionGroup.Controls.Add(yesButton);
                 sectionGroup.Controls.Add(noButton);
                 sectionGroup.Controls.Add(naButton);
+                //sectionGroup.Controls.Add(pictureBox);
                 sectionGroup.Location = new System.Drawing.Point(locationX, locationY + ladderLocationAddition * i);
                 sectionGroup.Name = (string)ladderParts[i] + "Group";
                 sectionGroup.Size = new System.Drawing.Size(300, 80);
