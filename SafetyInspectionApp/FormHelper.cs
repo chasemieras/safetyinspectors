@@ -12,7 +12,7 @@ namespace SafetyInspectionApp
     public class FormHelper
     {
 
-        private FormSettings formSettings = new FormSettings(); 
+        private FormSettings formSettings = new FormSettings();
         private GoogleSheetHelper sheetHelper = new GoogleSheetHelper();
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace SafetyInspectionApp
         /// </summary>
         /// <param name="nextForm"> The next for that will be shown </param>
         /// <param name="previousForm"> The previous form that will be hidden </param>
-        public void setUpForm(Form nextForm, Form previousForm) 
+        public void setUpForm(Form nextForm, Form previousForm)
         {
             nextForm.MinimizeBox = false;
             nextForm.MaximizeBox = false;
@@ -53,9 +53,9 @@ namespace SafetyInspectionApp
 
             IList<Object> controlsDataList = dataStorage.controlsDataList;
 
-        var sectionGroups = findByPattern<GroupBox>(@"\S*Group\b", panel);
+            var sectionGroups = findByPattern<GroupBox>(@"\S*Group\b", panel);
 
-            foreach (GroupBox gb in sectionGroups) 
+            foreach (GroupBox gb in sectionGroups)
             {
 
                 foreach (RadioButton rb in gb.Controls.OfType<RadioButton>())
@@ -72,7 +72,14 @@ namespace SafetyInspectionApp
 
                 foreach (TextBox tb in gb.Controls.OfType<TextBox>())
                 {
-                    controlsDataList.Add(tb.Text);
+                    if (tb.Text != null || tb.Text != "")
+                    {
+                        controlsDataList.Add(tb.Name + ": " + tb.Text);
+                    }
+                    else
+                    {
+                        controlsDataList.Add(tb.Name + ": n/a");
+                    }
                 }
             }
         }
@@ -133,7 +140,8 @@ namespace SafetyInspectionApp
         /// Sets up the ladder parts by making an array of the parts
         /// </summary>
         /// <returns>an array list of ladder parts</returns>
-        private ArrayList ladderConditionSetUp() {
+        private ArrayList ladderConditionSetUp()
+        {
             ArrayList ladderParts = new ArrayList();
             ladderParts.Add("steps");
             ladderParts.Add("rails");
@@ -163,9 +171,9 @@ namespace SafetyInspectionApp
         public void createSectionLadderCondition(int locationX, int locationY, Panel currentPanel)
         {
             ArrayList ladderParts = ladderConditionSetUp();
-            int ladderLocationAddition = 75;
+            int ladderLocationAddition = 100;
 
-            for (int i = 0; i < ladderParts.Count; i++) 
+            for (int i = 0; i < ladderParts.Count; i++)
             {
                 RadioButton yesButton = new System.Windows.Forms.RadioButton();
                 RadioButton noButton = new System.Windows.Forms.RadioButton();
@@ -182,7 +190,7 @@ namespace SafetyInspectionApp
                 sectionGroup.Controls.Add(naButton);
                 sectionGroup.Location = new System.Drawing.Point(locationX, locationY + ladderLocationAddition * i);
                 sectionGroup.Name = (string)ladderParts[i] + "Group";
-                sectionGroup.Size = new System.Drawing.Size(300, 80);
+                sectionGroup.Size = new System.Drawing.Size(300, 100);
 
                 // 
                 // label
@@ -225,6 +233,7 @@ namespace SafetyInspectionApp
                 yesButton.TabStop = true;
                 yesButton.Text = "Yes";
                 yesButton.UseVisualStyleBackColor = true;
+                yesButton.CheckedChanged += (sender, EventArgs) => { yesOrNoPressed(sender, EventArgs, sectionGroup); };
 
                 // 
                 // noButton
@@ -237,6 +246,7 @@ namespace SafetyInspectionApp
                 noButton.TabStop = true;
                 noButton.Text = "No";
                 noButton.UseVisualStyleBackColor = true;
+                noButton.CheckedChanged += (sender, EventArgs) => { yesOrNoPressed(sender, EventArgs, sectionGroup); };
 
                 // 
                 // naButton
@@ -252,6 +262,92 @@ namespace SafetyInspectionApp
 
                 currentPanel.Controls.Add(sectionGroup);
             }
+        }
+
+        /// <summary>
+        /// <para>Author: Mark Beebe</para>
+        /// Creates comment section(label and textbox) if yes or no is pressed.
+        /// </summary>
+        public void yesOrNoPressed(object sender, EventArgs e, GroupBox sectionGroup)
+        {
+            Label commentsTextBoxLabel = new System.Windows.Forms.Label();
+            TextBox commentsTextBox = new System.Windows.Forms.TextBox();
+
+            //
+            //commentsTextBoxLabel
+            //
+            commentsTextBoxLabel.AutoSize = true;
+            commentsTextBoxLabel.Location = new System.Drawing.Point(5, 70);
+            commentsTextBoxLabel.Name = sectionGroup.Name + "commentsTextBoxLabel";
+            commentsTextBoxLabel.Size = new System.Drawing.Size(94, 19);
+            commentsTextBoxLabel.TabIndex = 4;
+            commentsTextBoxLabel.TabStop = true;
+            commentsTextBoxLabel.Text = "Comments: ";
+            commentsTextBoxLabel.Visible = true;
+
+            //
+            //commentsTextBox
+            //
+            commentsTextBox.AutoSize = true;
+            commentsTextBox.Location = new System.Drawing.Point(80, 65);
+            commentsTextBox.Size = new System.Drawing.Size(210, 23);
+            commentsTextBox.Name = sectionGroup.Name + "commentsTextBox";
+            commentsTextBox.TabIndex = 5;
+            commentsTextBox.TabStop = true;
+            commentsTextBox.Visible = true;
+
+            foreach (RadioButton rb in sectionGroup.Controls.OfType<RadioButton>())
+            {
+                if ((rb.Checked && rb.Text.Contains("No")))
+                {
+                    sectionGroup.Controls.Add(commentsTextBoxLabel);
+                    sectionGroup.Controls.Add(commentsTextBox);
+
+                }
+                else if (rb.Checked && rb.Text.Contains("Yes") || rb.Checked && rb.Text.Contains("N/A"))
+                {
+                    if (sectionGroup.Controls.Contains(commentsTextBoxLabel)) 
+                    {
+                        sectionGroup.Controls.Remove(commentsTextBoxLabel);
+                        sectionGroup.Controls.Remove(commentsTextBox);
+                    }
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// <para>Author: Mark Beebe</para>
+        /// Checks every group box in the form(which represents each question)
+        /// to make sure a radio button has been checked. If there are any group boxes that do
+        /// not have a selection, returns false
+        /// </summary>
+        public Boolean validateRadioButtons(Panel panel)
+        {
+            var sectionGroups = findByPattern<GroupBox>(@"\S*Group\b", panel);
+
+            Boolean passed = false;
+            foreach (GroupBox gb in sectionGroups)
+            {
+                foreach (RadioButton rb in gb.Controls.OfType<RadioButton>())
+                {
+                    if (rb.Checked)
+                    {
+                        passed = true;
+                        break;
+                    }
+                    else
+                    {
+                        passed = false;
+
+                    }
+                }
+                if (passed == false)
+                {
+                    return false;
+                }
+            }
+            return passed;
         }
     }
 

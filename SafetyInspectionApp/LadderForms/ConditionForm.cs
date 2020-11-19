@@ -28,10 +28,20 @@ namespace SafetyInspectionApp.LadderForms
 
         private void NextButtonExten_Click(object sender, EventArgs e)
         {
+            if (formHelper.validateRadioButtons(conditionGroup) == true)
+            {
+                //do nothing, move on
+            }
+            else
+            {
+                return;
+            }
+
             Form closeForm;
             closeForm = new EndOfForm(formSettings);
             formHelper.storeInfoToSendToSheet(conditionGroup, formSettings);
             formHelper.setUpForm(closeForm, this);
+
         }
 
         private void ExtensionLadder_Load(object sender, EventArgs e)
