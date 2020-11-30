@@ -42,9 +42,12 @@
             this.employeeNameLabel = new System.Windows.Forms.Label();
             this.IntroLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.validator)).BeginInit();
             this.FormSelectGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cameraTicker
@@ -150,12 +153,31 @@
             this.nameTextBox.Size = new System.Drawing.Size(149, 23);
             this.nameTextBox.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(183, 390);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(297, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Next";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(82, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(633, 413);
+            this.panel1.TabIndex = 4;
+            // 
             // BlankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BlankForm";
             this.Text = "BlankForm";
@@ -163,6 +185,7 @@
             this.FormSelectGroup.ResumeLayout(false);
             this.FormSelectGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraDisplay)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,5 +204,7 @@
         private System.Windows.Forms.Label employeeNameLabel;
         private System.Windows.Forms.Label IntroLabel;
         private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

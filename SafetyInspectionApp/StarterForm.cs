@@ -93,6 +93,7 @@ namespace SafetyInspectionApp
                             }
                             //TO DO, ADD QUESTION SELECTION
                             formHelper.starterNextForm(this, formSettings);
+                            formSettings.KEY_WORD_FOR_FORM = result.ToString();
 
                         }
                         else
@@ -126,6 +127,7 @@ namespace SafetyInspectionApp
                 {
                     //TO DO, ADD QUESTION SELECTION
                     formHelper.starterNextForm(this, formSettings);
+                    formSettings.KEY_WORD_FOR_FORM = stringToCompare;
                 }
                 else 
                 {

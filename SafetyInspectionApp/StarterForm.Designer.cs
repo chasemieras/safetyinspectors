@@ -50,6 +50,7 @@
             // nameTextBox
             // 
             this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.nameTextBox.Location = new System.Drawing.Point(348, 57);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(149, 23);
@@ -60,6 +61,7 @@
             // 
             this.IntroLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.IntroLabel.AutoSize = true;
+            this.IntroLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.IntroLabel.Location = new System.Drawing.Point(228, 9);
             this.IntroLabel.Name = "IntroLabel";
             this.IntroLabel.Size = new System.Drawing.Size(351, 45);
@@ -71,6 +73,7 @@
             // 
             this.employeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.employeeNameLabel.AutoSize = true;
+            this.employeeNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.employeeNameLabel.Location = new System.Drawing.Point(245, 60);
             this.employeeNameLabel.Name = "employeeNameLabel";
             this.employeeNameLabel.Size = new System.Drawing.Size(97, 15);
@@ -80,12 +83,14 @@
             // FormSelectGroup
             // 
             this.FormSelectGroup.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.FormSelectGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.FormSelectGroup.Controls.Add(this.label1);
             this.FormSelectGroup.Controls.Add(this.formSelectionList);
             this.FormSelectGroup.Controls.Add(this.startCamera);
             this.FormSelectGroup.Controls.Add(this.cameraDisplay);
             this.FormSelectGroup.Controls.Add(this.label3);
             this.FormSelectGroup.Controls.Add(this.systemCameraList);
+            this.FormSelectGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.FormSelectGroup.Location = new System.Drawing.Point(228, 86);
             this.FormSelectGroup.Name = "FormSelectGroup";
             this.FormSelectGroup.Size = new System.Drawing.Size(343, 331);
@@ -96,6 +101,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label1.Location = new System.Drawing.Point(8, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 15);
@@ -104,6 +110,7 @@
             // 
             // formSelectionList
             // 
+            this.formSelectionList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.formSelectionList.FormattingEnabled = true;
             this.formSelectionList.Location = new System.Drawing.Point(116, 50);
             this.formSelectionList.Name = "formSelectionList";
@@ -113,12 +120,14 @@
             // 
             // startCamera
             // 
+            this.startCamera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.startCamera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.startCamera.Location = new System.Drawing.Point(279, 21);
             this.startCamera.Name = "startCamera";
             this.startCamera.Size = new System.Drawing.Size(58, 23);
             this.startCamera.TabIndex = 8;
             this.startCamera.Text = "Start";
-            this.startCamera.UseVisualStyleBackColor = true;
+            this.startCamera.UseVisualStyleBackColor = false;
             this.startCamera.Click += new System.EventHandler(this.startCamera_Click);
             // 
             // cameraDisplay
@@ -132,6 +141,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label3.Location = new System.Drawing.Point(8, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 30);
@@ -140,6 +150,7 @@
             // 
             // systemCameraList
             // 
+            this.systemCameraList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.systemCameraList.FormattingEnabled = true;
             this.systemCameraList.Location = new System.Drawing.Point(67, 21);
             this.systemCameraList.Name = "systemCameraList";
@@ -159,11 +170,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.FormSelectGroup);
             this.Controls.Add(this.employeeNameLabel);
             this.Controls.Add(this.IntroLabel);
             this.Controls.Add(this.nameTextBox);
+            this.ForeColor = System.Drawing.Color.Coral;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StarterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
