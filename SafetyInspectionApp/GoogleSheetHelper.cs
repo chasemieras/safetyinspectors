@@ -15,23 +15,22 @@ namespace SafetyInspectionApp
     {
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/sheets.googleapis.com-dotnet-quickstart.json
-        static string[] Scopes = { SheetsService.Scope.Spreadsheets };
-        static string SheetId = "1uF8l987wP9xgX0ui0H_pezsv0_GgWfWYzqklOPto1vo";
+        string[] Scopes = { SheetsService.Scope.Spreadsheets };
+        public string sheetID;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dataToInsert"></param>
-        public void WriteToSheet(List<IList<Object>> dataToInsert)
+        public void GetSheetID()
         {
-            UpdatGoogleSheet(dataToInsert, SheetId, "A1:F24", AuthorizeAccess());
+            foreach (string line in File.ReadLines(@"SheetID.txt"))
+            {
+                sheetID = line;
+            }
         }
 
         /// <summary>
         /// Authorizes our request to access Google's API
         /// </summary>
         /// <returns></returns>
-        private static SheetsService AuthorizeAccess()
+        private SheetsService AuthorizeAccess()
         {
             UserCredential credential;
             using (var stream =
@@ -57,52 +56,13 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
-        /// Gets the range of the spreadsheet you will be working will.
-        /// If the spreadsheet is empty the range will be defaulted into Range "A:A"
-        /// </summary>
-        /// <param name="service"></param>
-        /// <returns></returns>
-        protected static string GetRange(SheetsService service)
-        {
-            // Define request parameters.
-            String spreadsheetId = SheetId;
-            String range = "A:A";
-            SpreadsheetsResource.ValuesResource.GetRequest getRequest =
-                       service.Spreadsheets.Values.Get(spreadsheetId, range);
-            ValueRange getResponse = getRequest.Execute();
-            IList<IList<Object>> getValues = getResponse.Values;
-            if (getValues == null)
-            {
-                String emptyRange = "1:1";
-                return emptyRange;
-            }
-            int currentCount = getValues.Count();
-            String newRange = "A" + currentCount + ":A";
-            return newRange;
-        }
-
-        /// <summary>
-        /// Will inset all the things as strings. If you want data in proper format then change the 
-        /// ValueInputOptionEnum.RAW to .USERENTERED
-        /// </summary>
-        private void UpdatGoogleSheet(IList<IList<Object>> values, string spreadsheetId, string newRange, SheetsService service)
-        {
-            SpreadsheetsResource.ValuesResource.AppendRequest request =
-               service.Spreadsheets.Values.Append(new ValueRange() { Values = values }, spreadsheetId, newRange);
-            request.InsertDataOption = SpreadsheetsResource.ValuesResource.AppendRequest.InsertDataOptionEnum.INSERTROWS;
-            request.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;
-            var response = request.Execute();
-        }
-
-        /// <summary>
         /// Searches the google sheet between a certain range and grabs all in the range.
         /// </summary>
         /// <param name="link"></param>
         /// <param name="range"></param>
         /// <returns></returns>
-        public static IList<IList<Object>> SearchSheet(string link, string range)
+        public IList<IList<Object>> SearchSheet(string link, string range)
         {
-
             // Define request parameters.
             String spreadsheetId = link;
             String where = range;
@@ -117,84 +77,69 @@ namespace SafetyInspectionApp
         }
 
         /// <summary>
-        /// 
+        /// Get's all of the names in the "Form List", this is column B
         /// </summary>
-        /// <param name="RangeOnSheet"></param>
-        /// <param name="DataWanted"></param>
-        /// <param name="HowFarToGo"></param>
-        /// <returns></returns>
-        public string[] findThis(string RangeOnSheet, string DataWanted, int HowFarToGo)
+        /// <returns>The String Array of all names</returns>
+        public string[] getFormName()
         {
-            string SheetId = "1Tx1Lv46kbe4B2xNbIlKSKNVCOR00VuBoAeBfeFzy50M";
-            IList<IList<Object>> values = SearchSheet(SheetId, RangeOnSheet);
-            int rowCounter = 0;
-            string[] cells = new string[7];
 
-            if (values != null && values.Count > 0)
+            int ColumnLength = getNumberCurrentForms();
+
+            string[] cells = new string[(ColumnLength + 1)];
+
+            SpreadsheetsResource.ValuesResource.GetRequest request =
+                    AuthorizeAccess().Spreadsheets.Values.Get(sheetID, "B2:B" + (ColumnLength + 1));
+
+            ValueRange response = request.Execute();
+            IList<IList<Object>> values = response.Values;
+            int i = 0;
+            foreach (var row in values)
             {
-                foreach (var row in values) //for each row in the sheet
-                {
-                    rowCounter++;
-
-                    if (row != null && row.Count > 0 && row[0] != null) //if the row is not null or empty.
-                    {
-                        for (int j = 0; j < HowFarToGo - 1; j++)
-                        {
-
-                            // Print columns A and E, which correspond to indices 0 and 4.
-                            if (row[j].ToString() == DataWanted && row[j] != null)
-                            {
-                                if (row.Count < HowFarToGo)
-                                {
-                                    for (int i = 0; i < row.Count; i++)// prints contents of row
-                                    {
-                                        if (row[i] != "")
-                                        {
-                                            cells[i] = row[i] + ", " + GetColumnName(i) + ":" + rowCounter;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    for (int i = 0; i < HowFarToGo; i++)
-                                    {
-                                        if (row[i] != "")
-                                        {
-                                            cells[i] = row[i] + ", " + GetColumnName(i) + ":" + rowCounter;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                return cells;
+                cells[i] = (string)row[0];
+                i++;
             }
-            else
-            {
-                return null;
-            }
+            return cells;
         }
 
         /// <summary>
-        /// 
+        /// Get's all of the names in the "Form List", this is column D
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
-        static string GetColumnName(int index)
+        /// <returns>The String Array of all links</returns>
+        public string[] getFormLink()
         {
-            const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            int ColumnLength = getNumberCurrentForms();
 
-            var value = "";
+            string[] cells = new string[(ColumnLength + 1)];
 
-            if (index >= letters.Length)
+            SpreadsheetsResource.ValuesResource.GetRequest request =
+                    AuthorizeAccess().Spreadsheets.Values.Get(sheetID, "D2:D" + (ColumnLength + 1));
+
+            ValueRange response = request.Execute();
+            IList<IList<Object>> values = response.Values;
+            int i = 0;
+            foreach (var row in values)
             {
-                value += letters[index / letters.Length - 1];
+                cells[i] = (string)row[0];
+                i++;
             }
+            return cells;
+        }
 
-            value += letters[index % letters.Length];
-
-            return value;
+        /// <summary>
+        /// Get's all of the names in the "Form List", this is cell A2
+        /// </summary>
+        /// <returns>The number of google forms</returns>
+        public int getNumberCurrentForms()
+        {
+            SpreadsheetsResource.ValuesResource.GetRequest request =
+                    AuthorizeAccess().Spreadsheets.Values.Get(sheetID, "A2:A2");
+            ValueRange response = request.Execute();
+            IList<IList<Object>> values = response.Values;
+            foreach (var row in values)
+            {
+                return Int32.Parse((string)row[0]);
+            }
+            return 100;
         }
 
     }

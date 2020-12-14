@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {}
+    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectorsMaster\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {
+    "C:\\Users\\gamep\\Source\\Repos\\safetyinspectorsMaster\\SafetyInspectionApp\\SafetyInspectionApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
+        "projectUniqueName": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectorsMaster\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
         "projectName": "SafetyInspectionApp",
-        "projectPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
-        "packagesPath": "C:\\Users\\Chase Mieras\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chase Mieras\\source\\repos\\safetyinspectors\\SafetyInspectionApp\\obj\\",
+        "projectPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectorsMaster\\SafetyInspectionApp\\SafetyInspectionApp.csproj",
+        "packagesPath": "C:\\Users\\gamep\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gamep\\Source\\Repos\\safetyinspectorsMaster\\SafetyInspectionApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Chase Mieras\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\gamep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -77,7 +81,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

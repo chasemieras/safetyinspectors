@@ -30,12 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StarterForm));
-            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.IntroLabel = new System.Windows.Forms.Label();
-            this.employeeNameLabel = new System.Windows.Forms.Label();
             this.FormSelectGroup = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.formSelectionList = new System.Windows.Forms.ComboBox();
+            this.formButton = new System.Windows.Forms.Button();
+            this.FormSelectionText = new System.Windows.Forms.Label();
+            this.formSelectionDropDown = new System.Windows.Forms.ComboBox();
             this.startCamera = new System.Windows.Forms.Button();
             this.cameraDisplay = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,80 +46,71 @@
             ((System.ComponentModel.ISupportInitialize)(this.validator)).BeginInit();
             this.SuspendLayout();
             // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.nameTextBox.Location = new System.Drawing.Point(348, 57);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(149, 23);
-            this.nameTextBox.TabIndex = 0;
-            this.nameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.nameTextBox_Validating);
-            // 
             // IntroLabel
             // 
             this.IntroLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.IntroLabel.AutoSize = true;
             this.IntroLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.IntroLabel.Location = new System.Drawing.Point(228, 9);
+            this.IntroLabel.Location = new System.Drawing.Point(95, 9);
             this.IntroLabel.Name = "IntroLabel";
-            this.IntroLabel.Size = new System.Drawing.Size(351, 45);
+            this.IntroLabel.Size = new System.Drawing.Size(603, 45);
             this.IntroLabel.TabIndex = 1;
-            this.IntroLabel.Text = "Welcome to the Safety Inspection Form. Please input your name, \r\nand scan the QR " +
-    "code for the form.\r\n\r\n";
-            // 
-            // employeeNameLabel
-            // 
-            this.employeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.employeeNameLabel.AutoSize = true;
-            this.employeeNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.employeeNameLabel.Location = new System.Drawing.Point(245, 60);
-            this.employeeNameLabel.Name = "employeeNameLabel";
-            this.employeeNameLabel.Size = new System.Drawing.Size(97, 15);
-            this.employeeNameLabel.TabIndex = 2;
-            this.employeeNameLabel.Text = "Employee Name:";
+            this.IntroLabel.Text = resources.GetString("IntroLabel.Text");
+            this.IntroLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormSelectGroup
             // 
             this.FormSelectGroup.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.FormSelectGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.FormSelectGroup.Controls.Add(this.label1);
-            this.FormSelectGroup.Controls.Add(this.formSelectionList);
+            this.FormSelectGroup.BackColor = System.Drawing.Color.White;
+            this.FormSelectGroup.Controls.Add(this.formButton);
+            this.FormSelectGroup.Controls.Add(this.FormSelectionText);
+            this.FormSelectGroup.Controls.Add(this.formSelectionDropDown);
             this.FormSelectGroup.Controls.Add(this.startCamera);
             this.FormSelectGroup.Controls.Add(this.cameraDisplay);
             this.FormSelectGroup.Controls.Add(this.label3);
             this.FormSelectGroup.Controls.Add(this.systemCameraList);
             this.FormSelectGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.FormSelectGroup.Location = new System.Drawing.Point(228, 86);
+            this.FormSelectGroup.Location = new System.Drawing.Point(206, 57);
             this.FormSelectGroup.Name = "FormSelectGroup";
-            this.FormSelectGroup.Size = new System.Drawing.Size(343, 331);
+            this.FormSelectGroup.Size = new System.Drawing.Size(401, 433);
             this.FormSelectGroup.TabIndex = 4;
             this.FormSelectGroup.TabStop = false;
             this.FormSelectGroup.Text = "Scan a QR Code";
             // 
-            // label1
+            // formButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(8, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 15);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "-or- Select a Form";
+            this.formButton.BackColor = System.Drawing.Color.White;
+            this.formButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.formButton.Location = new System.Drawing.Point(286, 397);
+            this.formButton.Name = "formButton";
+            this.formButton.Size = new System.Drawing.Size(58, 23);
+            this.formButton.TabIndex = 8;
+            this.formButton.Text = "Go To";
+            this.formButton.UseVisualStyleBackColor = false;
+            this.formButton.Click += new System.EventHandler(this.goToForm_Click);
             // 
-            // formSelectionList
+            // FormSelectionText
             // 
-            this.formSelectionList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.formSelectionList.FormattingEnabled = true;
-            this.formSelectionList.Location = new System.Drawing.Point(116, 50);
-            this.formSelectionList.Name = "formSelectionList";
-            this.formSelectionList.Size = new System.Drawing.Size(217, 23);
-            this.formSelectionList.TabIndex = 9;
-            this.formSelectionList.SelectedIndexChanged += new System.EventHandler(this.formSelection_SelectedIndexChanged);
+            this.FormSelectionText.AutoSize = true;
+            this.FormSelectionText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.FormSelectionText.Location = new System.Drawing.Point(8, 397);
+            this.FormSelectionText.Name = "FormSelectionText";
+            this.FormSelectionText.Size = new System.Drawing.Size(55, 30);
+            this.FormSelectionText.TabIndex = 6;
+            this.FormSelectionText.Text = "Form\r\nSelection";
+            this.FormSelectionText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // formSelectionDropDown
+            // 
+            this.formSelectionDropDown.FormattingEnabled = true;
+            this.formSelectionDropDown.Location = new System.Drawing.Point(69, 397);
+            this.formSelectionDropDown.Name = "formSelectionDropDown";
+            this.formSelectionDropDown.Size = new System.Drawing.Size(211, 23);
+            this.formSelectionDropDown.TabIndex = 9;
             // 
             // startCamera
             // 
-            this.startCamera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.startCamera.BackColor = System.Drawing.Color.White;
             this.startCamera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.startCamera.Location = new System.Drawing.Point(279, 21);
             this.startCamera.Name = "startCamera";
@@ -132,7 +122,7 @@
             // 
             // cameraDisplay
             // 
-            this.cameraDisplay.Location = new System.Drawing.Point(0, 79);
+            this.cameraDisplay.Location = new System.Drawing.Point(33, 65);
             this.cameraDisplay.Name = "cameraDisplay";
             this.cameraDisplay.Size = new System.Drawing.Size(343, 252);
             this.cameraDisplay.TabIndex = 7;
@@ -150,7 +140,7 @@
             // 
             // systemCameraList
             // 
-            this.systemCameraList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.systemCameraList.BackColor = System.Drawing.Color.White;
             this.systemCameraList.FormattingEnabled = true;
             this.systemCameraList.Location = new System.Drawing.Point(67, 21);
             this.systemCameraList.Name = "systemCameraList";
@@ -159,7 +149,7 @@
             // 
             // cameraTicker
             // 
-            this.cameraTicker.Interval = 1000;
+            this.cameraTicker.Interval = 60;
             this.cameraTicker.Tick += new System.EventHandler(this.cameraTicker_Tick);
             // 
             // validator
@@ -170,12 +160,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 521);
             this.Controls.Add(this.FormSelectGroup);
-            this.Controls.Add(this.employeeNameLabel);
             this.Controls.Add(this.IntroLabel);
-            this.Controls.Add(this.nameTextBox);
             this.ForeColor = System.Drawing.Color.Coral;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StarterForm";
@@ -193,10 +181,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label IntroLabel;
-        private System.Windows.Forms.Label employeeNameLabel;
         private System.Windows.Forms.GroupBox FormSelectGroup;
 
         //Camera Code
@@ -205,8 +190,9 @@
         private System.Windows.Forms.ComboBox systemCameraList;
         private System.Windows.Forms.Button startCamera;
         private System.Windows.Forms.Timer cameraTicker;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox formSelectionList;
         private System.Windows.Forms.ErrorProvider validator;
+        private System.Windows.Forms.Button formButton;
+        private System.Windows.Forms.Label FormSelectionText;
+        private System.Windows.Forms.ComboBox formSelectionDropDown;
     }
 }
